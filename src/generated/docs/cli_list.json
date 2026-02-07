@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/cli/list.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2026-01-06\ntitle: List Content Declaration Files\ndescription: Learn how to list all content declaration files in your project.\nkeywords:\n  - List\n  - Content Declaration\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - list\nhistory:\n  - version: 7.5.12\n    date: 2026-01-06\n    changes: Add absolute output option to list command\n  - version: 7.5.11\n    date: 2026-01-06\n    changes: Add JSON output option to list command\n---\n\n# List content declaration files\n\n```bash\nnpx intlayer content list\n```\n\n## Aliases:\n\n- `npx intlayer list`\n\nThis command displays all content declaration files in your project, showing their dictionary keys and file paths. It's useful for getting an overview of all your content files and verifying that they are properly discovered by Intlayer.\n\n## Arguments:\n\n- **`--json`**: Output the results as JSON instead of formatted text. Useful for scripting and programmatic access.\n\n  > Example: `npx intlayer content list --json`\n\n## Examples:\n\n### List content declaration files:\n\n```bash\nnpx intlayer content list\n```\n\n### Output as JSON:\n\n```bash\nnpx intlayer content list --json\n```\n\n### Output as absolute paths:\n\n```bash\nnpx intlayer content list --absolute\n```\n\n## Example output:\n\n### Formatted output:\n\n```bash\nnpx intlayer content list\nContent declaration files:\n - home-page        - src/components/HomePage/homePage.content.ts\n - server-component - src/components/ServerComponent/serverComponent.content.ts\n - client-component - src/components/ClientComponent/clientComponent.content.ts\n\nTotal content declaration files: 3\n```\n\n### JSON output:\n\n```bash\n$ npx intlayer content list --json\n\n[{\"key\":\"home-page\",\"path\":\"src/components/HomePage/homePage.content.ts\"},{\"key\":\"server-component\",\"path\":\"src/components/ServerComponent/serverComponent.content.ts\"},{\"key\":\"client-component\",\"path\":\"src/components/ClientComponent/clientComponent.content.ts\"}]\n```\n\nThis command will output:\n\n- A formatted list of all content declaration files with their keys and relative file paths\n- The total count of content declaration files found\n\nThe output helps you verify that all your content files are properly configured and discoverable by the Intlayer system.\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2026-01-06",
+  "title": "List Content Declaration Files",
+  "description": "Learn how to list all content declaration files in your project.",
+  "keywords": [
+    "List",
+    "Content Declaration",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "list"
+  ],
+  "history": [
+    {
+      "version": "7.5.12",
+      "date": "2026-01-06",
+      "changes": "Add absolute output option to list command"
+    },
+    {
+      "version": "7.5.11",
+      "date": "2026-01-06",
+      "changes": "Add JSON output option to list command"
+    }
+  ],
+  "docKey": "./docs/en/cli/list.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/list.md",
+  "relativeUrl": "/doc/concept/cli/list",
+  "url": "https://intlayer.org/doc/concept/cli/list"
+}

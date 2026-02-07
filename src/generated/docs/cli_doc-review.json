@@ -1,0 +1,26 @@
+{
+  "id": "./docs/en/cli/doc-review.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Review Document\ndescription: Learn how to review documentation files for quality, consistency, and completeness across different locales.\nkeywords:\n  - Review\n  - Document\n  - Documentation\n  - AI\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - doc-review\n---\n\n# Review Document\n\nThe `doc review` command analyzes documentation files for quality, consistency, and completeness across different locales.\n\n## Key Points:\n\n- Split large markdown files into chunks to stay within the AI model's context window limits.\n- Optimize the chunks to review, and skip the parts that are already translated, and not changed.\n- Process files, chunks, and locales in parallel using a queue system to increase speed.\n\n```bash\nnpx intlayer doc review\n```\n\nIt can be used to review files that are already translated, and to check if the translation is correct.\n\nFor most use cases,\n\n- prefer using the `doc translate` when the translated version of this file is not available.\n- prefer using the `doc review` when the translated version of this file already exists.\n\n> Note that the review process consumes more entry tokens than the translate process to review the same file entirely. However, the review process will optimize the chunks to review, and will skip the parts that are not changed.\n\n## Arguments:\n\nThe `doc review` command accepts the same arguments as `doc translate`, allowing you to review specific documentation files and apply quality checks.\n\nIf you activated one of the git options, the command will only review the part of the files that getting changed. The script will process by chunking the file and review each chunk. If there is no changes in the chunk, the script will skip it to speed up the review process and limit the AI Provider API cost.\n\nFor a complete list of arguments, see the [Translate Document](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/doc-translate.md) command documentation.\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Review Document",
+  "description": "Learn how to review documentation files for quality, consistency, and completeness across different locales.",
+  "keywords": [
+    "Review",
+    "Document",
+    "Documentation",
+    "AI",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "doc-review"
+  ],
+  "docKey": "./docs/en/cli/doc-review.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/doc-review.md",
+  "relativeUrl": "/doc/concept/cli/doc-review",
+  "url": "https://intlayer.org/doc/concept/cli/doc-review"
+}

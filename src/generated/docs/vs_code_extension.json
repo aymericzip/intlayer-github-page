@@ -1,0 +1,53 @@
+{
+  "id": "./docs/en/vs_code_extension.md",
+  "content": "---\ncreatedAt: 2025-03-17\nupdatedAt: 2025-09-30\ntitle: Official VS Code Extension\ndescription: Learn how to use the Intlayer extension in VS Code to enhance your development workflow. Quickly navigate between localized content and manage your dictionaries efficiently.\nkeywords:\n  - VS Code Extension\n  - Intlayer\n  - Localization\n  - Development Tools\n  - React\n  - Next.js\n  - JavaScript\n  - TypeScript\nslugs:\n  - doc\n  - vs-code-extension\nhistory:\n  - version: 7.3.0\n    date: 2025-11-25\n    changes: Add extract content command\n  - version: 6.1.5\n    date: 2025-09-30\n    changes: Add demo gif\n  - version: 6.1.0\n    date: 2025-09-24\n    changes: Added environment selection section\n  - version: 6.0.0\n    date: 2025-09-22\n    changes: Intlayer Tab / Fill & Test commands\n  - version: 5.5.10\n    date: 2025-06-29\n    changes: Init history\n---\n\n# Official VS Code Extension\n\n## Overview\n\n[**Intlayer**](https://marketplace.visualstudio.com/items?itemName=Intlayer.intlayer-vs-code-extension) is the official Visual Studio Code extension for **Intlayer**, designed to improve the developer experience when working with localized content in your projects.\n\n![Intlayer VS Code Extension](https://github.com/aymericzip/intlayer/blob/main/docs/assets/vs_code_extension_demo.gif?raw=true)\n\nExtension link: [https://marketplace.visualstudio.com/items?itemName=Intlayer.intlayer-vs-code-extension](https://marketplace.visualstudio.com/items?itemName=Intlayer.intlayer-vs-code-extension)\n\n## Features\n\n![Extract content](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_extract_content.gif?raw=true)\n\n- **Extract Content** – Extract content from your React / Vue / Svelte components\n\n![Fill dictionaries](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_fill_active_dictionary.gif?raw=true)\n\n- **Instant Navigation** – Quickly jump to the correct content file when clicking on a `useIntlayer` key.\n- **Fill Dictionaries** – Fill dictionaries with content from your project.\n\n![List commands](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_list_commands.gif?raw=true)\n\n- **Easy access to Intlayer Commands** – Build, push, pull, fill, test content dictionaries with ease.\n\n![Create content file](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_create_content_file.gif?raw=true)\n\n- **Content Declaration Generator** – Create dictionary content files in various formats (`.ts`, `.esm`, `.cjs`, `.json`).\n\n![Test dictionaties](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_test_missing_dictionary.gif?raw=true)\n\n- **Test Dictionaries** – Test dictionaries for missing translations.\n\n![Rebuild dictionary](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_rebuild_dictionary.gif?raw=true)\n\n- **Keep your dictionaries up to date** – Keep your dictionaries up to date with the latest content from your project.\n\n![Intlayer Tab (Activity Bar)](https://github.com/aymericzip/intlayer-vs-code-extension/blob/master/assets/vscode_extention_search_dictionary.gif?raw=true)\n\n- **Intlayer Tab (Activity Bar)** – Browse and search dictionaries from a dedicated side tab with toolbar and context actions (Build, Pull, Push, Fill, Refresh, Test, Create File).\n\n## Usage\n\n### Quick Navigation\n\n1. Open a project using **react-intlayer**.\n2. Locate a call to `useIntlayer()`, such as:\n\n   ```tsx\n   const content = useIntlayer(\"app\");\n   ```\n\n3. **Command-click** (`⌘+Click` on macOS) or **Ctrl+Click** (on Windows/Linux) on the key (e.g., `\"app\"`).\n4. VS Code will automatically open the corresponding dictionary file, e.g., `src/app.content.ts`.\n\n### Intlayer Tab (Activity Bar)\n\nUse the side tab to browse and manage dictionaries:\n\n- Open the Intlayer icon in the Activity Bar.\n- In **Search**, type to filter dictionaries and entries in real time.\n- In **Dictionaries**, browse environments, dictionaries, and files. Use the toolbar for Build, Pull, Push, Fill, Refresh, Test, and Create Dictionary File. Right‑click for context actions (Pull/Push on dictionaries, Fill on files). The current editor file auto‑reveals in the tree when applicable.\n\n### Accessing the commands\n\nYou can access the commands from the **Command Palette**.\n\n```sh\nCmd + Shift + P (macOS) / Ctrl + Shift + P (Windows/Linux)\n```\n\n- **Build Dictionaries**\n- **Push Dictionaries**\n- **Pull Dictionaries**\n- **Fill Dictionaries**\n- **Test Dictionaries**\n- **Create Dictionary File**\n\n### Loading Environment Variables\n\nIntlayer recommand to store your AI API keys, as well as Intlayer client ID and secret in environment variables.\n\nThe extension can load environment variables from your workspace to run Intlayer commands with the correct context.\n\n- **Load order (by priority)**: `.env.<env>.local` → `.env.<env>` → `.env.local` → `.env`\n- **Non-destructive**: existing `process.env` values are not overridden.\n- **Scope**: files are resolved from the configured base directory (defaults to the workspace root).\n\n#### Selecting the active environment\n\n- **Command Palette**: open the palette and run `Intlayer: Select Environment`, then choose the environment (e.g., `development`, `staging`, `production`). The extension will attempt to load the first available file in the priority list above and show a notification like “Loaded env from .env.<env>.local”.\n- **Settings**: go to `Settings → Extensions → Intlayer`, and set:\n  - **Environment**: the environment name used to resolve `.env.<env>*` files.\n  - (Optional) **Env File**: an explicit path to a `.env` file. When provided, it takes precedence over the inferred list.\n\n#### Monorepos and custom directories\n\nIf your `.env` files live outside the workspace root, set the **Base Directory** in `Settings → Extensions → Intlayer`. The loader will look for `.env` files relative to that directory.\n",
+  "createdAt": "2025-03-17",
+  "updatedAt": "2025-09-30",
+  "title": "Official VS Code Extension",
+  "description": "Learn how to use the Intlayer extension in VS Code to enhance your development workflow. Quickly navigate between localized content and manage your dictionaries efficiently.",
+  "keywords": [
+    "VS Code Extension",
+    "Intlayer",
+    "Localization",
+    "Development Tools",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "slugs": [
+    "doc",
+    "vs-code-extension"
+  ],
+  "history": [
+    {
+      "version": "7.3.0",
+      "date": "2025-11-25",
+      "changes": "Add extract content command"
+    },
+    {
+      "version": "6.1.5",
+      "date": "2025-09-30",
+      "changes": "Add demo gif"
+    },
+    {
+      "version": "6.1.0",
+      "date": "2025-09-24",
+      "changes": "Added environment selection section"
+    },
+    {
+      "version": "6.0.0",
+      "date": "2025-09-22",
+      "changes": "Intlayer Tab / Fill & Test commands"
+    },
+    {
+      "version": "5.5.10",
+      "date": "2025-06-29",
+      "changes": "Init history"
+    }
+  ],
+  "docKey": "./docs/en/vs_code_extension.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/vs_code_extension.md",
+  "relativeUrl": "/doc/vs-code-extension",
+  "url": "https://intlayer.org/doc/vs-code-extension"
+}

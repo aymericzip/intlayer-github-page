@@ -1,0 +1,25 @@
+{
+  "id": "./docs/en/cli/live.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Live Sync Commands\ndescription: Learn how to use Live Sync to reflect CMS content changes at runtime.\nkeywords:\n  - Live Sync\n  - CMS\n  - Runtime\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - live\n---\n\n# Live Sync commands\n\nLive Sync lets your app reflect CMS content changes at runtime. No rebuild or redeploy required. When enabled, updates are streamed to a Live Sync server that refreshes the dictionaries your application reads. See [Intlayer CMS](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/intlayer_CMS.md) for more details.\n\n```json fileName=\"package.json\"\n\"scripts\": {\n  \"intlayer:live:start\": \"npx intlayer live start --with 'next dev --turbopack'\"\n}\n```\n\n## Arguments:\n\n**Configuration options:**\n\n- **`--base-dir`**: Specify the base directory for the project. To retrieve the intlayer configuration, the command will look for the `intlayer.config.{ts,js,json,cjs,mjs}` file in the base directory.\n\n- **`--no-cache`**: Disable the cache.\n\n  > Example: `npx intlayer dictionary push --env-file .env.production.local`\n\n**Log options:**\n\n- **`--verbose`**: Enable verbose logging for debugging. (default to true using CLI)\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Live Sync Commands",
+  "description": "Learn how to use Live Sync to reflect CMS content changes at runtime.",
+  "keywords": [
+    "Live Sync",
+    "CMS",
+    "Runtime",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "live"
+  ],
+  "docKey": "./docs/en/cli/live.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/live.md",
+  "relativeUrl": "/doc/concept/cli/live",
+  "url": "https://intlayer.org/doc/concept/cli/live"
+}

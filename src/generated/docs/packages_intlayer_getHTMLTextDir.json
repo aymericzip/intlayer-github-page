@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/packages/intlayer/getHTMLTextDir.md",
+  "content": "---\ncreatedAt: 2025-08-23\nupdatedAt: 2025-08-23\ntitle: getHTMLTextDir Function Documentation | intlayer\ndescription: See how to use the getHTMLTextDir function for intlayer package\nkeywords:\n  - getHTMLTextDir\n  - translation\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Next.js\n  - JavaScript\n  - React\nslugs:\n  - doc\n  - packages\n  - intlayer\n  - getHTMLTextDir\nhistory:\n  - version: 5.5.10\n    date: 2025-06-29\n    changes: Init history\n---\n\n# Documentation: `getHTMLTextDir` Function in `intlayer`\n\n## Description\n\nThe `getHTMLTextDir` function determines the text direction (`ltr`, `rtl`, or `auto`) based on the provided locale. It is designed to help developers set the `dir` attribute in HTML for proper text rendering.\n\n## Parameters\n\n- `locale?: Locales`\n  - **Description**: The locale string (e.g., `Locales.ENGLISH`, `Locales.ARABIC`) used to determine the text direction.\n  - **Type**: `Locales` (optional)\n\n## Returns\n\n- **Type**: `Dir` (`'ltr' | 'rtl' | 'auto'`)\n- **Description**: The text direction corresponding to the locale:\n  - `'ltr'` for left-to-right languages.\n  - `'rtl'` for right-to-left languages.\n  - `'auto'` if the locale is not recognized.\n\n## Example Usage\n\n### Determining Text Direction\n\n```typescript codeFormat=\"typescript\"\nimport { getHTMLTextDir } from \"intlayer\";\n\ngetHTMLTextDir(Locales.ENGLISH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.FRENCH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.ARABIC); // Output: \"rtl\"\n```\n\n```javascript codeFormat=\"esm\"\nimport { getHTMLTextDir } from \"intlayer\";\n\ngetHTMLTextDir(Locales.ENGLISH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.FRENCH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.ARABIC); // Output: \"rtl\"\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getHTMLTextDir } = require(\"intlayer\");\n\ngetHTMLTextDir(Locales.ENGLISH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.FRENCH); // Output: \"ltr\"\ngetHTMLTextDir(Locales.ARABIC); // Output: \"rtl\"\n```\n\n## Edge Cases\n\n- **No Locale Provided:**\n  - The function returns `'auto'` when `locale` is `undefined`.\n\n- **Unrecognized Locale:**\n  - For unrecognized locales, the function defaults to `'auto'`.\n\n## Usage in Components:\n\nThe `getHTMLTextDir` function can be used to dynamically set the `dir` attribute in an HTML document for proper text rendering based on the locale.\n\n```tsx codeFormat=\"typescript\"\nimport type { FC } from \"react\";\nimport { getHTMLTextDir, type Locales } from \"intlayer\";\n\nexport const HTMLLayout: FC<PropsWithChildren<{ locale: Locales }>> = ({\n  children,\n  locale,\n}) => (\n  <html dir={getHTMLTextDir(locale)} locale={locale}>\n    <body>{children}</body>\n  </html>\n);\n```\n\n```jsx codeFormat=\"esm\"\nimport { getHTMLTextDir } from \"intlayer\";\n\nconst HTMLLayout = ({ children, locale }) => (\n  <html dir={getHTMLTextDir(locale)} locale={locale}>\n    <body>{children}</body>\n  </html>\n);\n```\n\n```jsx codeFormat=\"commonjs\"\nconst { getHTMLTextDir } = require(\"intlayer\");\n\nconst HTMLLayout = ({ children, locale }) => (\n  <html dir={getHTMLTextDir(locale)} locale={locale}>\n    <body>{children}</body>\n  </html>\n);\n```\n\nIn the example above, the `dir` attribute is dynamically set based on the locale.\n",
+  "createdAt": "2025-08-23",
+  "updatedAt": "2025-08-23",
+  "title": "getHTMLTextDir Function Documentation | intlayer",
+  "description": "See how to use the getHTMLTextDir function for intlayer package",
+  "keywords": [
+    "getHTMLTextDir",
+    "translation",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Next.js",
+    "JavaScript",
+    "React"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer",
+    "getHTMLTextDir"
+  ],
+  "history": [
+    {
+      "version": "5.5.10",
+      "date": "2025-06-29",
+      "changes": "Init history"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer/getHTMLTextDir.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/getHTMLTextDir.md",
+  "relativeUrl": "/doc/packages/intlayer/getHTMLTextDir",
+  "url": "https://intlayer.org/doc/packages/intlayer/getHTMLTextDir"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "./docs/en/packages/vite-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: vite-intlayer Package Documentation\ndescription: Vite plugin for Intlayer, providing dictionary aliases and watchers.\nkeywords:\n  - vite-intlayer\n  - vite\n  - plugin\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - vite-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# vite-intlayer Package\n\nThe `vite-intlayer` package provides a Vite plugin to integrate Intlayer into your Vite-based application.\n\n## Installation\n\n```bash\nnpm install vite-intlayer\n```\n\n## Exports\n\n### Plugin\n\nImport:\n\n```tsx\nimport \"vite-intlayer\";\n```\n\n| Function             | Description                                                           | Related Doc                                                                                                            |\n| -------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |\n| `intlayer`           | Main Vite plugin that integrates Intlayer into the build process.     | [intlayer](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/intlayer.md)           |\n| `intlayerPlugin`     | (**Deprecated**) Alias for `intlayer`.                                | [intlayer](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/intlayer.md)           |\n| `intlayerProxy`      | Development middleware plugin to handle locale detection and routing. | -                                                                                                                      |\n| `intlayerMiddleware` | (**Deprecated**) Alias for `intlayerProxy`.                           | -                                                                                                                      |\n| `intlayerPrune`      | Plugin to tree-shake and prune unused dictionaries during build.      | [intlayerPrune](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/intlayerPrune.md) |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "vite-intlayer Package Documentation",
+  "description": "Vite plugin for Intlayer, providing dictionary aliases and watchers.",
+  "keywords": [
+    "vite-intlayer",
+    "vite",
+    "plugin",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "vite-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/vite-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/vite-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/vite-intlayer/exports"
+}

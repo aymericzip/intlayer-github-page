@@ -5,37 +5,52 @@
   "type": "module",
   "homepage": "https://aymericzip.github.io/intlayer-github-page",
   "scripts": {
-    "dev": "vite",
-    "prebuild": "tsx scripts/generate-docs.ts",
-    "build": "tsc -b && vite build",
-    "predev": "tsx scripts/generate-docs.ts",
+  
+    "dev": "vite dev --port 3000",
+    "prebuild": "bun scripts/generate-docs.ts && bun scripts/generate-sitemap.ts",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d .output/public"
   },
   "dependencies": {
-    "@intlayer/docs": "^8.0.4",
-    "intlayer": "^8.0.4",
+    "@intlayer/design-system": "latest",
+    "@intlayer/docs": "latest",
+    "@tanstack/react-router": "^1.158.4",
+    "@tanstack/react-start": "1.159.0",
+    "@tanstack/start": "1.120.20",
+    "@tanstack/router-vite-plugin": "^1.158.4",
+    "@tanstack/router-plugin": "1.158.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "fuse.js": "^7.1.0",
+    "intlayer": "latest",
+    "lucide-react": "^0.563.0",
+    "next-themes": "^0.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-intlayer": "^8.0.4",
-    "vite-intlayer": "^8.0.4"
+    "react-intlayer": "latest",
+    "tailwind-merge": "^3.4.0",
+    "vite-intlayer": "latest"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/node": "^24.10.1",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/vite": "4.1.18",
+    "@tanstack/router-cli": "^1.131.50",
+    "@types/node": "^25.2.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
+    "eslint": "^10.0.0",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-react-refresh": "^0.5.0",
     "gh-pages": "^6.3.0",
-    "globals": "^16.5.0",
-    "tsx": "^4.21.0",
+    "globals": "^17.3.0",
+    "nitro": "^3.0.1-alpha.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
-    "vite-plugin-node-polyfills": "^0.25.0"
+    "vite-tsconfig-paths": "latest"
   }
 }

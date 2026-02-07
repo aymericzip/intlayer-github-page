@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# Intlayer Documentation Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the official [Intlayer](https://intlayer.org) documentation website. See [GitHub Project](https://github.com/aymericzip/intlayer) 
 
-Currently, two official plugins are available:
+It is a modern, high-performance Single Page Application (SPA) built with **React**, **Vite**, and **TanStack Router**, designed to serve documentation with near-instant navigation and minimal initial bundle size.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## React Compiler
+- **Framework**: React 19
+- **Build Tool**: Vite 6
+- **Routing**: TanStack Router (with file-based routing)
+- **Styling**: Tailwind CSS v4
+- **I18n**: Intlayer
+- **Deployment**: GitHub Pages (Static Hosting)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Architecture Overview
 
-## Expanding the ESLint configuration
+The documentation content flow works as follows:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Source**: Documentation lives as Markdown (`.md`) files in `../docs/en/`.
+2.  **Generation**: The `scripts/generate-docs.ts` script runs before the build.
+    - It creates `src/generated/docsIndex.json`: A map of titles and URLs for the sidebar.
+    - It creates `src/generated/docs/*.json`: Individual files containing the compiled Markdown content.
+3.  **Runtime**:
+    - The **Router** loads the index immediately to build the sidebar.
+    - When a user clicks a link, the **Loader** dynamically imports the specific JSON chunk for that page.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v18+) or Bun
+- Git
+
+### Installation
+
+```bash
+git clone [https://github.com/aymericzip/intlayer-docs-site.git](https://github.com/aymericzip/intlayer-docs-site.git)
+cd intlayer-docs-site
+bun install
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Running Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+bun run dev
+
 ```
+
+The site will be available at `http://localhost:3000`.
+
+## Building & Deployment
+
+### Build Process
+
+To create a production build:
+
+```bash
+# 1. Generates the JSON docs and sitemap
+# 2. Builds the Vite application
+bun run build
+
+```
+
+This will output the static site to the `.output/public` directory.
+
+### Deploying to GitHub Pages
+
+This project is configured to deploy to GitHub Pages via the `gh-pages` branch.
+
+**Important**:
+
+* The `vite.config.ts` is set with `base: '/intlayer-github-page/'`.
+* The `router.tsx` is set with `basepath: '/intlayer-github-page'`.
+
+To deploy manually:
+
+```bash
+bun run deploy
+
+```
+
+This script performs the following steps:
+
+1. Builds the application.
+2. Creates a `.nojekyll` file to bypass GitHub's default Jekyll processing (allowing `_assets` folders).
+3. Copies `index.html` to `404.html` to support client-side routing on reload.
+4. Pushes the `.output/public` folder to the `gh-pages` branch.
+
+## Contributing
+
+Contributions are welcome! If you find a bug or want to improve the documentation:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/improvement`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some improvement'`).
+5. Push to the branch (`git push origin feature/improvement`).
+6. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+

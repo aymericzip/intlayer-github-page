@@ -1,0 +1,35 @@
+{
+  "id": "./docs/en/packages/vite-intlayer/intlayerPrune.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: intlayerPrune Vite Plugin Documentation | vite-intlayer\ndescription: See how to use the intlayerPrune plugin for vite-intlayer package\nkeywords:\n  - intlayerPrune\n  - vite\n  - plugin\n  - tree-shaking\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - vite-intlayer\n  - intlayerPrune\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# intlayerPrune Vite Plugin Documentation\n\nThe `intlayerPrune` Vite plugin is used to tree-shake and prune unused dictionaries from your application bundle. This helps reduce the final bundle size by only including the necessary multilingual content.\n\n## Usage\n\n```ts\n// vite.config.ts\nimport { defineConfig } from \"vite\";\nimport { intlayer, intlayerPrune } from \"vite-intlayer\";\n\nexport default defineConfig({\n  plugins: [intlayer(), intlayerPrune()],\n});\n```\n\n## Description\n\nThe plugin analyzes your source code to identify which dictionary keys are actually used. It then removes any unused content from the bundled dictionary files. This is particularly useful for large projects with many dictionaries where only a subset is used in specific pages or components.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "intlayerPrune Vite Plugin Documentation | vite-intlayer",
+  "description": "See how to use the intlayerPrune plugin for vite-intlayer package",
+  "keywords": [
+    "intlayerPrune",
+    "vite",
+    "plugin",
+    "tree-shaking",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "vite-intlayer",
+    "intlayerPrune"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/vite-intlayer/intlayerPrune.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/intlayerPrune.md",
+  "relativeUrl": "/doc/packages/vite-intlayer/intlayerPrune",
+  "url": "https://intlayer.org/doc/packages/vite-intlayer/intlayerPrune"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/angular-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: angular-intlayer Package Documentation\ndescription: Angular-specific integration for Intlayer, providing providers and services for Angular applications.\nkeywords:\n  - angular-intlayer\n  - angular\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - angular-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# angular-intlayer Package\n\nThe `angular-intlayer` package provides the necessary tools to integrate Intlayer into Angular applications. It includes providers and services for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install angular-intlayer\n```\n\n## Exports\n\nImport:\n\n```tsx\nimport \"angular-intlayer\";\n```\n\n### Setup\n\n| Function          | Description                                               |\n| ----------------- | --------------------------------------------------------- |\n| `provideIntlayer` | Function to provide Intlayer in your Angular application. |\n\n### Hooks\n\n| Hook                   | Description                                                                                                       | Related Doc |\n| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |\n| `useIntlayer`          | Based on `useDictionary`, but injects an optimized version of the dictionary from the generated declaration.      | -           |\n| `useDictionary`        | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. | -           |\n| `useDictionaryAsync`   | Same as `useDictionary`, but handles asynchronous dictionaries.                                                   | -           |\n| `useDictionaryDynamic` | Same as `useDictionary`, but handles dynamic dictionaries.                                                        | -           |\n| `useLocale`            | Returns the current locale and a function to set it.                                                              | -           |\n| `useIntl`              | Returns the Intl object for the current locale.                                                                   | -           |\n| `useLoadDynamic`       | Hook to load dynamic dictionaries.                                                                                | -           |\n\n### Components\n\n| Component                   | Description                                      |\n| --------------------------- | ------------------------------------------------ |\n| `IntlayerMarkdownComponent` | Angular component that renders markdown content. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "angular-intlayer Package Documentation",
+  "description": "Angular-specific integration for Intlayer, providing providers and services for Angular applications.",
+  "keywords": [
+    "angular-intlayer",
+    "angular",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "angular-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/angular-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/angular-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/angular-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/angular-intlayer/exports"
+}

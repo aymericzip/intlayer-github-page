@@ -1,0 +1,24 @@
+{
+  "id": "./docs/en/cli/sdk.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: CLI SDK\ndescription: Learn how to use the Intlayer CLI SDK in your own code.\nkeywords:\n  - SDK\n  - CLI\n  - Intlayer\n  - Programmatic\nslugs:\n  - doc\n  - concept\n  - cli\n  - sdk\n---\n\n# CLI SDK\n\nThe CLI SDK is a library that allows you to use the Intlayer CLI in your own code.\n\n```bash packageManager=\"npm\"\nnpm install @intlayer/cli --save-dev\n```\n\n```bash packageManager=\"yarn\"\nyarn add @intlayer/cli --save-dev\n```\n\n```bash packageManager=\"pnpm\"\npnpm add @intlayer/cli --save-dev\n```\n\n```bash packageManager=\"bun\"\nbun add @intlayer/cli --dev\n```\n\nExample of usage:\n\n```ts\nimport {\n  push,\n  pull,\n  fill,\n  build,\n  listContentDeclaration,\n  testMissingTranslations,\n  docTranslate,\n  docReview,\n  transform,\n} from \"@intlayer/cli\";\n\npush();\n// ...\npull();\n// ...\nfill();\n// ...\nbuild();\n// ...\nlistContentDeclaration();\n// ...\ntestMissingTranslations();\n// ...\ndocTranslate();\n// ...\ndocReview();\n// ...\ntransform();\n// ...\n```\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "CLI SDK",
+  "description": "Learn how to use the Intlayer CLI SDK in your own code.",
+  "keywords": [
+    "SDK",
+    "CLI",
+    "Intlayer",
+    "Programmatic"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "sdk"
+  ],
+  "docKey": "./docs/en/cli/sdk.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/sdk.md",
+  "relativeUrl": "/doc/concept/cli/sdk",
+  "url": "https://intlayer.org/doc/concept/cli/sdk"
+}

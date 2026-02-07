@@ -1,0 +1,33 @@
+{
+  "id": "./docs/en/packages/react-intlayer/useDictionary.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: useDictionary Hook Documentation | react-intlayer\ndescription: See how to use the useDictionary hook for react-intlayer package\nkeywords:\n  - useDictionary\n  - dictionary\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - react-intlayer\n  - useDictionary\nhistory:\n  - version: 7.5.14\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# useDictionary Hook Documentation\n\nThe `useDictionary` hook allows you to process an object that looks like a dictionary (containing keys and content) and handle translations, enumerations, etc., within it. Unlike `useIntlayer`, which is designed to work with generated dictionary declarations, `useDictionary` is more flexible and can be used with any object that follows the dictionary structure.\n\n## Usage\n\n```tsx\nimport { useDictionary } from \"react-intlayer\";\nimport { t } from \"intlayer\";\n\nconst MyComponent = () => {\n  const content = useDictionary({\n    key: \"my_key\",\n    content: {\n      myTranslation: t({\n        en: \"Hello\",\n        fr: \"Bonjour\",\n      }),\n    },\n  });\n\n  return (\n    <div>\n      <p>{content.myTranslation}</p>\n    </div>\n  );\n};\n```\n\n## Description\n\nThe hook performing the following tasks:\n\n1. **Locale Detection**: It uses the current locale from the `IntlayerProvider` context.\n2. **Translation Processing**: it resolves the content based on the detected locale, processing any `t()`, `enu()`, etc., definitions found within the object.\n3. **Flexible Content**: It works directly with the object passed to it, making it ideal for dynamic content or objects that are not part of the standard pre-built dictionaries.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "useDictionary Hook Documentation | react-intlayer",
+  "description": "See how to use the useDictionary hook for react-intlayer package",
+  "keywords": [
+    "useDictionary",
+    "dictionary",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "react-intlayer",
+    "useDictionary"
+  ],
+  "history": [
+    {
+      "version": "7.5.14",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/react-intlayer/useDictionary.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/react-intlayer/useDictionary.md",
+  "relativeUrl": "/doc/packages/react-intlayer/useDictionary",
+  "url": "https://intlayer.org/doc/packages/react-intlayer/useDictionary"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "./docs/en/cli/push.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Push Dictionaries\ndescription: Learn how to push your dictionaries to the Intlayer editor and CMS.\nkeywords:\n  - Push\n  - Dictionaries\n  - CLI\n  - Intlayer\n  - Editor\n  - CMS\nslugs:\n  - doc\n  - concept\n  - cli\n  - push\n---\n\n# Push Dictionaries\n\n```bash\nnpx intlayer dictionary push\n```\n\nIf [intlayer editor](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/intlayer_visual_editor.md) is installed, you can also push dictionaries to the editor. This command will allow to make the dictionaries available to [the editor](https://app.intlayer.org/). By this way, you can share your dictionaries with your team and edit your content without editing the code of your application.\n\n## Aliases:\n\n- `npx intlayer dictionaries push`\n- `npx intlayer dictionary push`\n- `npx intlayer dic push`\n\n## Arguments:\n\n**Dictionary options:**\n\n- **`-d`, `--dictionaries`**: ids of the dictionaries to pull. If not specified, all dictionaries will be pushed.\n\n  > Example: `npx intlayer dictionary push -d my-dictionary-id my-other-dictionary-id`\n\n- **`--dictionary`**: ids of the dictionaries to pull (alias for --dictionaries).\n\n  > Example: `npx intlayer dictionary push --dictionary my-dictionary-id my-other-dictionary-id`\n\n**Configuration options:**\n\n- **`--base-dir`**: Specify the base directory for the project. To retrieve the intlayer configuration, the command will look for the `intlayer.config.{ts,js,json,cjs,mjs}` file in the base directory.\n\n  > Example: `npx intlayer dictionary push --env-file .env.production.local`\n\n- **`--no-cache`**: Disable the cache.\n\n  > Example: `npx intlayer build --no-cache`\n\n**Environment variables options:**\n\n- **`--env`**: Specify the environment (e.g., `development`, `production`). Useful in the case you use environment variables in your intlayer configuration file.\n- **`--env-file`**: Provide a custom environment file to load variables from. Useful in the case you use environment variables in your intlayer configuration file.\n\n  > Example: `npx intlayer dictionary push --env-file .env.production.local`\n\n  > Example: `npx intlayer dictionary push --env production`\n\n**Output options:**\n\n- **`-r`, `--delete-locale-dictionary`**: Skip the question that asking to delete the locales directories once the dictionaries are pushed, and remove them. By default, if the dictionary is defined locally, it will overwrite distant dictionaries content.\n\n  > Example: `npx intlayer dictionary push -r`\n\n  > Example: `npx intlayer dictionary push --delete-locale-dictionary`\n\n- **`-k`, `--keep-locale-dictionary`**: Skip the question that asking to delete the locales directories once the dictionaries are pushed, and keep them. By default, is the dictionary is defined locally, it will overwrite distant dictionaries content.\n\n  > Example: `npx intlayer dictionary push -k`\n\n  > Example: `npx intlayer dictionary push --keep-locale-dictionary`\n\n**Preparation options:**\n\n- **`--build`**: Build the dictionaries before pushing to ensure the content is up to date. True will force the build, false will skip the build, undefined will allow using the cache of the build.\n\n**Log options:**\n\n- **`--verbose`**: Enable verbose logging for debugging. (default to true using CLI)\n\n**Git options:**\n\n- **`--git-diff`**: Only run on dictionaries that includes changes from base (default `origin/main`) to current branch (default: `HEAD`).\n- **`--git-diff-base`**: Specify the base reference for git diff (default `origin/main`).\n- **`--git-diff-current`**: Specify the current reference for git diff (default: `HEAD`).\n- **`--uncommitted`**: Include uncommitted changes.\n- **`--unpushed`**: Include unpushed changes.\n- **`--untracked`**: Include untracked files.\n\n  > Example: `npx intlayer dictionary push --git-diff --git-diff-base origin/main --git-diff-current HEAD`\n\n  > Example: `npx intlayer dictionary push --uncommitted --unpushed --untracked`\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Push Dictionaries",
+  "description": "Learn how to push your dictionaries to the Intlayer editor and CMS.",
+  "keywords": [
+    "Push",
+    "Dictionaries",
+    "CLI",
+    "Intlayer",
+    "Editor",
+    "CMS"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "push"
+  ],
+  "docKey": "./docs/en/cli/push.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/push.md",
+  "relativeUrl": "/doc/concept/cli/push",
+  "url": "https://intlayer.org/doc/concept/cli/push"
+}

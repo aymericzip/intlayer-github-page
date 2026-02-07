@@ -1,0 +1,24 @@
+{
+  "id": "./docs/en/cli/editor.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Editor Commands\ndescription: Learn how to use the Intlayer editor commands.\nkeywords:\n  - Editor\n  - Visual Editor\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - editor\n---\n\n# Editor commands\n\nThe `editor` command rewrap the `intlayer-editor` commands.\n\n> To be able to use the `editor` command, the `intlayer-editor` package must be installed. (See [Intlayer Visual Editor](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/intlayer_visual_editor.md))\n\n```json fileName=\"package.json\"\n\"scripts\": {\n  \"intlayer:editor:start\": \"npx intlayer editor start --with 'next dev --turbopack'\"\n}\n```\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Editor Commands",
+  "description": "Learn how to use the Intlayer editor commands.",
+  "keywords": [
+    "Editor",
+    "Visual Editor",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "editor"
+  ],
+  "docKey": "./docs/en/cli/editor.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/editor.md",
+  "relativeUrl": "/doc/concept/cli/editor",
+  "url": "https://intlayer.org/doc/concept/cli/editor"
+}

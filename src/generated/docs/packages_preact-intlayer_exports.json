@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/preact-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: preact-intlayer Package Documentation\ndescription: Preact-specific integration for Intlayer, providing providers and hooks for Preact applications.\nkeywords:\n  - preact-intlayer\n  - preact\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - preact-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# preact-intlayer Package\n\nThe `preact-intlayer` package provides the necessary tools to integrate Intlayer into Preact applications. It includes providers and hooks for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install preact-intlayer\n```\n\n## Exports\n\n### Provider\n\n| Component          | Description                                                                      |\n| ------------------ | -------------------------------------------------------------------------------- |\n| `IntlayerProvider` | The main provider that wraps your application and provides the Intlayer context. |\n\n### Hooks\n\n| Hook            | Description                                                                                                       | Related Doc                                                                                            |\n| --------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |\n| `useIntlayer`   | Based on `useDictionary`, but injects an optimized version of the dictionary from the generated declaration.      | -                                                                                                      |\n| `useDictionary` | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. | -                                                                                                      |\n| `useLocale`     | Returns the current locale and a function to set it.                                                              | -                                                                                                      |\n| `t`             | Picks content based on the current locale.                                                                        | [translation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/dictionary/translation.md) |\n\n### Components\n\n| Component          | Description                                      |\n| ------------------ | ------------------------------------------------ |\n| `MarkdownProvider` | Provider for markdown rendering context.         |\n| `MarkdownRenderer` | Renders markdown content with custom components. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "preact-intlayer Package Documentation",
+  "description": "Preact-specific integration for Intlayer, providing providers and hooks for Preact applications.",
+  "keywords": [
+    "preact-intlayer",
+    "preact",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "preact-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/preact-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/preact-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/preact-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/preact-intlayer/exports"
+}

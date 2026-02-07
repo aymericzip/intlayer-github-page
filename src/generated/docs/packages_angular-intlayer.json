@@ -1,0 +1,30 @@
+{
+  "id": "./docs/en/packages/angular-intlayer.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: angular-intlayer Package Documentation\ndescription: Angular-specific integration for Intlayer, providing providers and services for Angular applications.\nkeywords:\n  - angular-intlayer\n  - angular\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - angular-intlayer\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# angular-intlayer Package\n\nThe `angular-intlayer` package provides the necessary tools to integrate Intlayer into Angular applications. It includes providers and services for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install angular-intlayer\n```\n\n## Exports\n\n### Setup\n\n| Function          | Description                                               |\n| ----------------- | --------------------------------------------------------- |\n| `provideIntlayer` | Function to provide Intlayer in your Angular application. |\n\n### Services\n\n| Service           | Description                                                            |\n| ----------------- | ---------------------------------------------------------------------- |\n| `IntlayerService` | Service that picking one dictionary by its key and return the content. |\n| `LocaleService`   | Service that returns the current locale and a function to set it.      |\n\n### Components\n\n| Component                   | Description                                      |\n| --------------------------- | ------------------------------------------------ |\n| `IntlayerMarkdownComponent` | Angular component that renders markdown content. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "angular-intlayer Package Documentation",
+  "description": "Angular-specific integration for Intlayer, providing providers and services for Angular applications.",
+  "keywords": [
+    "angular-intlayer",
+    "angular",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "angular-intlayer"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/angular-intlayer.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/angular-intlayer.md",
+  "relativeUrl": "/doc/packages/angular-intlayer",
+  "url": "https://intlayer.org/doc/packages/angular-intlayer"
+}

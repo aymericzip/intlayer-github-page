@@ -1,0 +1,24 @@
+{
+  "id": "./docs/en/cli/watch.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Watch Dictionaries\ndescription: Learn how to watch for changes in your content declaration files and automatically build dictionaries.\nkeywords:\n  - Watch\n  - Dictionaries\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - watch\n---\n\n# Watch Dictionaries\n\n```bash\nnpx intlayer watch\n```\n\nThis command will watch for changes in your content declaration files and build the dictionaries in the `.intlayer` directory.\nThis command is the equivalent of `npx intlayer build --watch --skip-prepare`.\n\n## Aliases:\n\n- `npx intlayer dictionaries watch`\n- `npx intlayer dictionary watch`\n- `npx intlayer dic watch`\n\n## Arguments:\n\n- **`--with`**: Start command in parallel with the watch.\n\n  > Example: `npx intlayer watch --with \"next dev --turbopack\"`\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Watch Dictionaries",
+  "description": "Learn how to watch for changes in your content declaration files and automatically build dictionaries.",
+  "keywords": [
+    "Watch",
+    "Dictionaries",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "watch"
+  ],
+  "docKey": "./docs/en/cli/watch.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/watch.md",
+  "relativeUrl": "/doc/concept/cli/watch",
+  "url": "https://intlayer.org/doc/concept/cli/watch"
+}

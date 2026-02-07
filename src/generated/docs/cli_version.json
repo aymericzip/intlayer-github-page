@@ -1,0 +1,23 @@
+{
+  "id": "./docs/en/cli/version.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Check CLI Version\ndescription: Learn how to check the installed Intlayer CLI version.\nkeywords:\n  - Version\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - version\n---\n\n# Check CLI version\n\n```bash\nnpx intlayer --version\nnpx intlayer version\n```\n\nBoth commands print the installed Intlayer CLI version.\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Check CLI Version",
+  "description": "Learn how to check the installed Intlayer CLI version.",
+  "keywords": [
+    "Version",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "version"
+  ],
+  "docKey": "./docs/en/cli/version.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/version.md",
+  "relativeUrl": "/doc/concept/cli/version",
+  "url": "https://intlayer.org/doc/concept/cli/version"
+}

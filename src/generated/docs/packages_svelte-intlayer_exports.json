@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/svelte-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: svelte-intlayer Package Documentation\ndescription: Svelte-specific integration for Intlayer, providing setup functions and stores for Svelte applications.\nkeywords:\n  - svelte-intlayer\n  - svelte\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - svelte-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# svelte-intlayer Package\n\nThe `svelte-intlayer` package provides the necessary tools to integrate Intlayer into Svelte applications. It includes setup functions and stores for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install svelte-intlayer\n```\n\n## Exports\n\n### Setup\n\nImport:\n\n```tsx\nimport \"svelte-intlayer\";\n```\n\n| Function        | Description                                            |\n| --------------- | ------------------------------------------------------ |\n| `setupIntlayer` | Function to setup Intlayer in your Svelte application. |\n\n### Store\n\nImport:\n\n```tsx\nimport \"svelte-intlayer\";\n```\n\n| Store           | Description                                            |\n| --------------- | ------------------------------------------------------ |\n| `intlayerStore` | Svelte store that contains the current Intlayer state. |\n\n### Hooks (Context)\n\nImport:\n\n```tsx\nimport \"svelte-intlayer\";\n```\n\n| Function               | Description                                                                                                       | Related Doc                                                                                                              |\n| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |\n| `useIntlayer`          | Based on `useDictionary`, but injects an optimized version of the dictionary from the generated declaration.      | -                                                                                                                        |\n| `useDictionary`        | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. | -                                                                                                                        |\n| `useDictionaryAsync`   | Same as `useDictionary`, but handles asynchronous dictionaries.                                                   | -                                                                                                                        |\n| `useDictionaryDynamic` | Same as `useDictionary`, but handles dynamic dictionaries.                                                        | -                                                                                                                        |\n| `useLocale`            | Returns the current locale and a function to set it.                                                              | -                                                                                                                        |\n| `useRewriteURL`        | Client-side function to manage URL rewrites. Automatically updates the URL if a localized rewrite rule exists.    | [useRewriteURL](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/svelte-intlayer/useRewriteURL.md) |\n| `useIntl`              | Returns the Intl object for the current locale.                                                                   | -                                                                                                                        |\n\n### Markdown\n\nImport:\n\n```tsx\nimport \"svelte-intlayer\";\n```\n\n| Function              | Description                                                      |\n| --------------------- | ---------------------------------------------------------------- |\n| `setIntlayerMarkdown` | Function to set the markdown context in your Svelte application. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "svelte-intlayer Package Documentation",
+  "description": "Svelte-specific integration for Intlayer, providing setup functions and stores for Svelte applications.",
+  "keywords": [
+    "svelte-intlayer",
+    "svelte",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "svelte-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/svelte-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/svelte-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/svelte-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/svelte-intlayer/exports"
+}

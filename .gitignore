@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 .intlayer
+
+.tanstack
+
+.output
+
+.nitro

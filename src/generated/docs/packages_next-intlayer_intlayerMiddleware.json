@@ -1,0 +1,34 @@
+{
+  "id": "./docs/en/packages/next-intlayer/intlayerMiddleware.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: intlayerMiddleware Documentation | next-intlayer\ndescription: See how to use the intlayerMiddleware function for next-intlayer package\nkeywords:\n  - intlayerMiddleware\n  - nextjs\n  - middleware\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - next-intlayer\n  - intlayerMiddleware\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# intlayerMiddleware Documentation\n\nThe `intlayerMiddleware` function is a Next.js middleware that handles locale-based routing and redirects. It automatically detects the user's preferred locale and redirects them to the appropriate localized path if necessary.\n\n## Usage\n\n```ts\n// middleware.ts\nexport { intlayerMiddleware as middleware } from \"next-intlayer\";\n\nexport const config = {\n  matcher: [\"/((?!api|_next/static|_next/image|favicon.ico).*)\"],\n};\n```\n\n## Description\n\nThe middleware performs the following tasks:\n\n1. **Locale Detection**: It checks the URL path, cookies, and `Accept-Language` header to determine the user's locale.\n2. **Redirection**: If the URL does not contain a locale prefix and the configuration requires one (or based on the user's preferences), it redirects to the localized URL.\n3. **Cookie Management**: It can store the detected locale in a cookie for future requests.\n\n## Parameters\n\nThe function takes the standard Next.js `NextRequest` as a parameter when used directly, or it can be exported as shown above.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "intlayerMiddleware Documentation | next-intlayer",
+  "description": "See how to use the intlayerMiddleware function for next-intlayer package",
+  "keywords": [
+    "intlayerMiddleware",
+    "nextjs",
+    "middleware",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "next-intlayer",
+    "intlayerMiddleware"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/next-intlayer/intlayerMiddleware.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/next-intlayer/intlayerMiddleware.md",
+  "relativeUrl": "/doc/packages/next-intlayer/intlayerMiddleware",
+  "url": "https://intlayer.org/doc/packages/next-intlayer/intlayerMiddleware"
+}

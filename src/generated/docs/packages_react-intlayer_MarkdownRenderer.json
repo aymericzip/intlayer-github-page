@@ -1,0 +1,33 @@
+{
+  "id": "./docs/en/packages/react-intlayer/MarkdownRenderer.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: MarkdownRenderer Component Documentation | react-intlayer\ndescription: See how to use the MarkdownRenderer component for react-intlayer package\nkeywords:\n  - MarkdownRenderer\n  - react\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - react-intlayer\n  - MarkdownRenderer\nhistory:\n  - version: 7.5.14\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# MarkdownRenderer Component Documentation\n\nThe `MarkdownRenderer` component renders markdown content with custom components.\n\n## Usage\n\n```tsx\nimport { MarkdownRenderer } from \"react-intlayer\";\n\nconst MyComponent = () => (\n  <MarkdownRenderer># My Title My content</MarkdownRenderer>\n);\n```\n\n## Props\n\n| Prop         | Type              | Description                                                       |\n| ------------ | ----------------- | ----------------------------------------------------------------- |\n| `children`   | `string`          | The markdown content to render.                                   |\n| `components` | `Overrides`       | A map of custom components to use for specific markdown elements. |\n| `options`    | `MarkdownOptions` | Additional options for the markdown renderer.                     |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "MarkdownRenderer Component Documentation | react-intlayer",
+  "description": "See how to use the MarkdownRenderer component for react-intlayer package",
+  "keywords": [
+    "MarkdownRenderer",
+    "react",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "react-intlayer",
+    "MarkdownRenderer"
+  ],
+  "history": [
+    {
+      "version": "7.5.14",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/react-intlayer/MarkdownRenderer.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/react-intlayer/MarkdownRenderer.md",
+  "relativeUrl": "/doc/packages/react-intlayer/MarkdownRenderer",
+  "url": "https://intlayer.org/doc/packages/react-intlayer/MarkdownRenderer"
+}

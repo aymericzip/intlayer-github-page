@@ -1,0 +1,26 @@
+{
+  "id": "./docs/en/packages/svelte-intlayer/useRewriteURL.md",
+  "content": "---\nupdatedAt: 2025-08-23\ncreatedAt: 2025-08-23\ntitle: useRewriteURL Hook Documentation\ndescription: Svelte-specific hook for managing localized URL rewrites in Intlayer.\nkeywords:\n  - useRewriteURL\n  - svelte-intlayer\n  - svelte\n  - sveltekit\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - svelte-intlayer\n  - useRewriteURL\n---\n\n# useRewriteURL Hook\n\nThe `useRewriteURL` hook for Svelte is designed to manage localized URL rewrites on the client side. It automatically corrects the browser's URL to its \"pretty\" localized version based on the current locale and the configuration in `intlayer.config.ts`.\n\nIt updates the URL silently using `window.history.replaceState`, avoiding full SvelteKit navigations.\n\n## Usage\n\nCall the hook within a Svelte component.\n\n```svelte\n<script>\n  import { useRewriteURL } from 'svelte-intlayer';\n\n  // Automatically correct /fr/tests to /fr/essais in the address bar if a rewrite rule exists\n  useRewriteURL();\n</script>\n\n<slot />\n```\n\n## How it works\n\n1. **Reactive Updates**: The hook subscribes to the Intlayer `locale` store.\n2. **Detection**: Whenever the locale changes (or on mount), it calculates if the current `window.location.pathname` has a prettier localized alias defined in your rewrite rules.\n3. **URL Correction**: If a prettier path is found, the hook calls `window.history.replaceState` to update the address bar without a full page reload or triggering SvelteKit navigation logic.\n\n## Why use it?\n\n- **SEO Best Practices**: Ensures search engines index only the pretty, localized version of your URLs.\n- **Improved UX**: Corrects manually entered URLs to reflect your preferred naming structure.\n- **Silent Updates**: Modifies the address bar without affecting the component tree or navigation history.\n",
+  "updatedAt": "2025-08-23",
+  "createdAt": "2025-08-23",
+  "title": "useRewriteURL Hook Documentation",
+  "description": "Svelte-specific hook for managing localized URL rewrites in Intlayer.",
+  "keywords": [
+    "useRewriteURL",
+    "svelte-intlayer",
+    "svelte",
+    "sveltekit",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "svelte-intlayer",
+    "useRewriteURL"
+  ],
+  "docKey": "./docs/en/packages/svelte-intlayer/useRewriteURL.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/svelte-intlayer/useRewriteURL.md",
+  "relativeUrl": "/doc/packages/svelte-intlayer/useRewriteURL",
+  "url": "https://intlayer.org/doc/packages/svelte-intlayer/useRewriteURL"
+}

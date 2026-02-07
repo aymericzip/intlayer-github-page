@@ -1,0 +1,34 @@
+{
+  "id": "./docs/en/packages/adonis-intlayer/t.md",
+  "content": "---\ncreatedAt: 2026-01-30\nupdatedAt: 2026-01-30\ntitle: t Function Documentation | adonis-intlayer\ndescription: See how to use the t function for adonis-intlayer package\nkeywords:\n  - t\n  - translation\n  - Intlayer\n  - Internationalization\n  - Documentation\n  - AdonisJS\n  - JavaScript\nslugs:\n  - doc\n  - packages\n  - adonis-intlayer\n  - t\nhistory:\n  - version: 8.0.0\n    date: 2026-01-30\n    changes: Initial documentation\n---\n\n# Documentation: `t` Function in `adonis-intlayer`\n\nThe `t` function in the `adonis-intlayer` package is the core utility for providing localized responses in your AdonisJS application. It simplifies internationalization (i18n) by dynamically selecting content based on the user's preferred language.\n\n---\n\n## Overview\n\nThe `t` function is used to define and retrieve translations for a given set of languages. It automatically determines the appropriate language to return based on the client's request settings, such as the `Accept-Language` header. If the preferred language is unavailable, it gracefully falls back to the default locale specified in your configuration.\n\n---\n\n## Key Features\n\n- **Dynamic Localization**: Automatically selects the most appropriate translation for the client.\n- **Fallback to Default Locale**: Falls back to a default locale if the client's preferred language isn't available, ensuring continuity in user experience.\n- **Asynchronous Context**: Works seamlessly within the AdonisJS request lifecycle using Async Local Storage.\n- **TypeScript Support**: Enforce type safety for your translations.\n\n---\n\n## Function Signature\n\n```typescript\nt(translations: Record<string, any>): any;\n```\n\n### Parameters\n\n- `translations`: An object where the keys are locale codes (e.g., `en`, `fr`, `es`) and the values are the corresponding translated content.\n\n### Returns\n\n- The content representing the client's preferred language.\n\n---\n\n## Loading the Middleware\n\nTo ensure that the `t` function works correctly, you **must** register the `intlayer` middleware in your AdonisJS application.\n\n```typescript fileName=\"start/kernel.ts\"\nrouter.use([() => import(\"adonis-intlayer/middleware\")]);\n```\n\n---\n\n## Usage Examples\n\n### Basic Example\n\n```typescript fileName=\"start/routes.ts\"\nimport router from \"@adonisjs/core/services/router\";\nimport { t } from \"adonis-intlayer\";\n\nrouter.get(\"/\", async () => {\n  return t({\n    en: \"Welcome!\",\n    fr: \"Bienvenue!\",\n    es: \"¡Bienvenido!\",\n  });\n});\n```\n\n### Usage in Controllers\n\n```typescript fileName=\"app/controllers/example_controller.ts\"\nimport type { HttpContext } from \"@adonisjs/core/http\";\nimport { t } from \"adonis-intlayer\";\n\nexport default class ExampleController {\n  async index({ response }: HttpContext) {\n    return response.send(\n      t({\n        en: \"Hello from controller\",\n        fr: \"Bonjour depuis le contrôleur\",\n      })\n    );\n  }\n}\n```\n\n---\n\n## Advanced Topics\n\n### Fallback Mechanism\n\nIf a preferred locale is unavailable, the `t` function will fallback to the default locale defined in your `intlayer.config.ts`.\n\n```typescript\nimport { Locales, type IntlayerConfig } from \"intlayer\";\n\nconst config: IntlayerConfig = {\n  internationalization: {\n    locales: [\n      Locales.ENGLISH,\n      Locales.RUSSIAN,\n      Locales.JAPANESE,\n      Locales.FRENCH,\n      Locales.KOREAN,\n      Locales.CHINESE,\n      Locales.SPANISH,\n      Locales.GERMAN,\n      Locales.ARABIC,\n      Locales.ITALIAN,\n      Locales.ENGLISH_UNITED_KINGDOM,\n      Locales.PORTUGUESE,\n      Locales.HINDI,\n      Locales.TURKISH,\n      Locales.POLISH,\n      Locales.INDONESIAN,\n      Locales.VIETNAMESE,\n      Locales.UKRAINIAN,\n    ],\n    defaultLocale: Locales.ENGLISH,\n  },\n};\n\nexport default config;\n```\n\n### TypeScript Integration\n\nThe `t` function is type-safe when used with defined dictionaries. For more details, refer to the [TypeScript documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/configuration.md).\n",
+  "createdAt": "2026-01-30",
+  "updatedAt": "2026-01-30",
+  "title": "t Function Documentation | adonis-intlayer",
+  "description": "See how to use the t function for adonis-intlayer package",
+  "keywords": [
+    "t",
+    "translation",
+    "Intlayer",
+    "Internationalization",
+    "Documentation",
+    "AdonisJS",
+    "JavaScript"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "adonis-intlayer",
+    "t"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-30",
+      "changes": "Initial documentation"
+    }
+  ],
+  "docKey": "./docs/en/packages/adonis-intlayer/t.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/adonis-intlayer/t.md",
+  "relativeUrl": "/doc/packages/adonis-intlayer/t",
+  "url": "https://intlayer.org/doc/packages/adonis-intlayer/t"
+}

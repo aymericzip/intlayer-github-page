@@ -1,0 +1,37 @@
+{
+  "id": "./docs/en/compiler.md",
+  "content": "---\ncreatedAt: 2025-09-09\nupdatedAt: 2025-09-09\ntitle: Intlayer Compiler | Automated Content Extraction for i18n\ndescription: Automate your internationalization process with the Intlayer Compiler. Extract content directly from your components for faster, more efficient i18n in Vite, Next.js, and more.\nkeywords:\n  - Intlayer\n  - Compiler\n  - Internationalization\n  - i18n\n  - Automation\n  - Extraction\n  - Speed\n  - Vite\n  - Next.js\n  - React\n  - Vue\n  - Svelte\nslugs:\n  - doc\n  - compiler\nhistory:\n  - version: 7.3.1\n    date: 2025-11-27\n    changes: Release Compiler\n---\n\n# Intlayer Compiler | Automated Content Extraction for i18n\n\n## What is the Intlayer Compiler?\n\nThe **Intlayer Compiler** is a powerful tool designed to automate the process of internationalization (i18n) in your applications. It scans your source code (JSX, TSX, Vue, Svelte) for content declarations, extracts them, and automatically generates the necessary dictionary files. This allows you to keep your content co-located with your components while Intlayer handles the management and synchronization of your dictionaries.\n\n## Why Use the Intlayer Compiler?\n\n- **Automation**: Eliminates manual copy-pasting of content into dictionaries.\n- **Speed**: Optimized content extraction ensuring your build process remains fast.\n- **Developer Experience**: Keep content declarations right where they are used, improving maintainability.\n- **Live Updates**: Supports Hot Module Replacement (HMR) for instant feedback during development.\n\nSee the [Compiler vs. Declarative i18n](https://github.com/aymericzip/intlayer/blob/main/docs/blog/en/compiler_vs_declarative_i18n.md) blog post for a deeper comparison.\n\n## Why not use the Intlayer Compiler?\n\nWhile the compiler offers an excellent \"just works\" experience, it also introduces some trade-offs you should be aware of:\n\n- **Heuristic ambiguity**: The compiler must guess what is user-facing content vs. application logic (e.g., `className=\"active\"`, status codes, product IDs). In complex codebases, this can lead to false positives or missed strings that require manual annotations and exceptions.\n- **Static-only extraction**: Compiler-based extraction relies on static analysis. Strings that only exist at runtime (API error codes, CMS fields, etc.) cannot be discovered or translated by the compiler alone, so you still need a complementary runtime i18n strategy.\n\nFor a deeper architectural comparison, see the blog post [Compiler vs. Declarative i18n](https://github.com/aymericzip/intlayer/blob/main/docs/blog/en/compiler_vs_declarative_i18n.md).\n\nAs an alternative, to automate your i18n process while keeping full control of your content, Intlayer also provides an auto-extraction command `intlayer transform` (see [CLI documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/transform.md)), or the `Intlayer: extract content to Dictionary` command from the Intlayer VS Code extension (see [VS Code extension documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/vs_code_extension.md)).\n\n## Usage\n\n### Vite\n\nFor Vite-based applications (React, Vue, Svelte, etc.), the easiest way to use the compiler is through the `vite-intlayer` plugin.\n\n#### Installation\n\n```bash\nnpm install vite-intlayer\n```\n\n#### Configuration\n\nUpdate your `vite.config.ts` to include the `intlayerCompiler` plugin:\n\n```ts fileName=\"vite.config.ts\"\nimport { defineConfig } from \"vite\";\nimport { intlayer, intlayerCompiler } from \"vite-intlayer\";\n\nexport default defineConfig({\n  plugins: [\n    intlayer(),\n    intlayerCompiler(), // Adds the compiler plugin\n  ],\n});\n```\n\n#### Framework Support\n\nThe Vite plugin automatically detects and handles different file types:\n\n- **React / JSX / TSX**: Handled natively.\n- **Vue**: Requires `@intlayer/vue-compiler`.\n- **Svelte**: Requires `@intlayer/svelte-compiler`.\n\nMake sure to install the appropriate compiler package for your framework:\n\n```bash\n# For Vue\nnpm install @intlayer/vue-compiler\n\n# For Svelte\nnpm install @intlayer/svelte-compiler\n```\n\n### Next.js (Babel)\n\nFor Next.js or other Webpack-based applications using Babel, you can configure the compiler using the `@intlayer/babel` plugin.\n\n#### Installation\n\n```bash\nnpm install @intlayer/babel\n```\n\n#### Configuration\n\nUpdate your `babel.config.js` (or `babel.config.json`) to include the extraction plugin. We provide a helper `getExtractPluginOptions` to load your Intlayer configuration automatically.\n\n```js fileName=\"babel.config.js\"\nconst {\n  intlayerExtractBabelPlugin,\n  intlayerOptimizeBabelPlugin,\n  getExtractPluginOptions,\n  getOptimizePluginOptions,\n} = require(\"@intlayer/babel\");\n\nmodule.exports = {\n  presets: [\"next/babel\"],\n  plugins: [\n    // Extract content from components into dictionaries\n    [intlayerExtractBabelPlugin, getExtractPluginOptions()],\n    // Optimize imports by replacing useIntlayer with direct dictionary imports\n    [intlayerOptimizeBabelPlugin, getOptimizePluginOptions()],\n  ],\n};\n```\n\nThis configuration ensures that content declared in your components is automatically extracted and used to generate dictionaries during your build process.\n",
+  "createdAt": "2025-09-09",
+  "updatedAt": "2025-09-09",
+  "title": "Intlayer Compiler | Automated Content Extraction for i18n",
+  "description": "Automate your internationalization process with the Intlayer Compiler. Extract content directly from your components for faster, more efficient i18n in Vite, Next.js, and more.",
+  "keywords": [
+    "Intlayer",
+    "Compiler",
+    "Internationalization",
+    "i18n",
+    "Automation",
+    "Extraction",
+    "Speed",
+    "Vite",
+    "Next.js",
+    "React",
+    "Vue",
+    "Svelte"
+  ],
+  "slugs": [
+    "doc",
+    "compiler"
+  ],
+  "history": [
+    {
+      "version": "7.3.1",
+      "date": "2025-11-27",
+      "changes": "Release Compiler"
+    }
+  ],
+  "docKey": "./docs/en/compiler.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/compiler.md",
+  "relativeUrl": "/doc/compiler",
+  "url": "https://intlayer.org/doc/compiler"
+}

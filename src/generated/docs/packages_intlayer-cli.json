@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/intlayer-cli.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: intlayer-cli Package Documentation\ndescription: CLI tool for Intlayer, providing commands for building and auditing dictionaries.\nkeywords:\n  - intlayer-cli\n  - cli\n  - tools\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - intlayer-cli\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# intlayer-cli Package\n\nThe `intlayer-cli` package provides a set of commands to manage Intlayer dictionaries and configuration.\n\n## Installation\n\n```bash\nnpm install intlayer-cli\n```\n\n## Exports\n\n### CLI Commands (Functions)\n\nThe package exports functions that power the CLI commands.\n\n| Function    | Description                                       |\n| ----------- | ------------------------------------------------- |\n| `build`     | Builds the Intlayer dictionaries.                 |\n| `audit`     | Audits the dictionaries for missing translations. |\n| `liveSync`  | Synchronizes dictionaries in real-time.           |\n| `pull`      | Pulls dictionaries from a remote source.          |\n| `push`      | Pushes dictionaries to a remote source.           |\n| `test`      | Runs tests on dictionaries.                       |\n| `transform` | Transforms dictionaries between formats.          |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "intlayer-cli Package Documentation",
+  "description": "CLI tool for Intlayer, providing commands for building and auditing dictionaries.",
+  "keywords": [
+    "intlayer-cli",
+    "cli",
+    "tools",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer-cli"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer-cli.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer-cli.md",
+  "relativeUrl": "/doc/packages/intlayer-cli",
+  "url": "https://intlayer.org/doc/packages/intlayer-cli"
+}

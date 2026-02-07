@@ -1,0 +1,34 @@
+{
+  "id": "./docs/en/cli/ci.md",
+  "content": "---\ncreatedAt: 2026-01-06\nupdatedAt: 2026-01-06\ntitle: CI Command\ndescription: Learn how to use the Intlayer CI command to run Intlayer commands with auto-injected credentials in CI/CD pipelines and monorepos.\nkeywords:\n  - CI\n  - CI/CD\n  - Automation\n  - Monorepo\n  - Credentials\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - ci\nhistory:\n  - version: 7.5.11\n    date: 2026-01-06\n    changes: Add CI command\n---\n\n# CI Command\n\n```bash\nnpx intlayer ci <command...>\n```\n\nThe CI command is designed for automation and CI/CD pipelines. It automatically injects credentials from the `INTLAYER_PROJECT_CREDENTIALS` environment variable and can run Intlayer commands across multiple projects in a monorepo.\n\n## How it works\n\nThe CI command operates in two modes:\n\n1. **Single Project Mode**: If the current working directory matches one of the project paths in `INTLAYER_PROJECT_CREDENTIALS`, it runs the command for that specific project only.\n\n2. **Iteration Mode**: If no specific project context is detected, it iterates over all configured projects and runs the command for each one.\n\n## Environment Variable\n\nThe command requires the `INTLAYER_PROJECT_CREDENTIALS` environment variable to be set. This variable should contain a JSON object mapping project paths to their credentials:\n\n```json\n{\n  \"packages/app\": {\n    \"clientId\": \"your-client-id-1\",\n    \"clientSecret\": \"your-client-secret-1\"\n  },\n  \"packages/admin\": {\n    \"clientId\": \"your-client-id-2\",\n    \"clientSecret\": \"your-client-secret-2\"\n  }\n}\n```\n\n## Package Manager Detection\n\nThe CI command automatically detects which package manager is being used (npm, yarn, pnpm, or bun) based on the `npm_config_user_agent` environment variable and uses the appropriate command to execute Intlayer.\n\n## Arguments\n\n- **`<command...>`**: The Intlayer command to execute (e.g., `fill`, `push`, `build`). You can pass any Intlayer command and its arguments.\n\n  > Example: `npx intlayer ci fill --verbose`\n  >\n  > Example: `npx intlayer ci push`\n  >\n  > Example: `npx intlayer ci build`\n\n## Examples\n\n### Run a command in single project mode\n\nIf you're in a project directory that matches one of the paths in `INTLAYER_PROJECT_CREDENTIALS`:\n\n```bash\ncd packages/app\nnpx intlayer ci fill\n```\n\nThis will run the `fill` command with credentials automatically injected for the `packages/app` project.\n\n### Run a command across all projects\n\nIf you're in a directory that doesn't match any project path, the command will iterate over all configured projects:\n\n```bash\ncd /path/to/monorepo\nnpx intlayer ci push\n```\n\nThis will run the `push` command for each project configured in `INTLAYER_PROJECT_CREDENTIALS`.\n\n### Pass additional flags\n\nYou can pass any flags to the underlying Intlayer command:\n\n```bash\nnpx intlayer ci fill --verbose --mode complete\n```\n\n### Use in CI/CD pipelines\n\nIn your CI/CD configuration (e.g., GitHub Actions, GitLab CI), set the `INTLAYER_PROJECT_CREDENTIALS` as a secret:\n\n```yaml\n# GitHub Actions example\nenv:\n  INTLAYER_PROJECT_CREDENTIALS: ${{ secrets.INTLAYER_PROJECT_CREDENTIALS }}\n\nsteps:\n  - name: Fill dictionaries\n    run: npx intlayer ci fill\n```\n\n## Error Handling\n\n- If `INTLAYER_PROJECT_CREDENTIALS` is not set, the command will exit with an error.\n- If `INTLAYER_PROJECT_CREDENTIALS` is not valid JSON, the command will exit with an error.\n- If a project path doesn't exist, it will be skipped with a warning.\n- If any project fails, the command will exit with a non-zero status code.\n\n## Use Cases\n\n- **Monorepo automation**: Run Intlayer commands across multiple projects in a monorepo\n- **CI/CD pipelines**: Automate dictionary management in continuous integration workflows\n- **Bulk operations**: Perform the same operation on multiple Intlayer projects at once\n- **Secret management**: Securely manage credentials for multiple projects using environment variables\n\n## Security Best Practices\n\n- Store `INTLAYER_PROJECT_CREDENTIALS` as encrypted secrets in your CI/CD platform\n- Never commit credentials to version control\n- Use environment-specific credentials for different deployment environments\n- Rotate credentials regularly\n",
+  "createdAt": "2026-01-06",
+  "updatedAt": "2026-01-06",
+  "title": "CI Command",
+  "description": "Learn how to use the Intlayer CI command to run Intlayer commands with auto-injected credentials in CI/CD pipelines and monorepos.",
+  "keywords": [
+    "CI",
+    "CI/CD",
+    "Automation",
+    "Monorepo",
+    "Credentials",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "ci"
+  ],
+  "history": [
+    {
+      "version": "7.5.11",
+      "date": "2026-01-06",
+      "changes": "Add CI command"
+    }
+  ],
+  "docKey": "./docs/en/cli/ci.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/ci.md",
+  "relativeUrl": "/doc/concept/cli/ci",
+  "url": "https://intlayer.org/doc/concept/cli/ci"
+}

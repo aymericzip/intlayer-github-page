@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/packages/intlayer/getTranslation.md",
+  "content": "---\ncreatedAt: 2025-08-23\nupdatedAt: 2025-08-23\ntitle: getTranslation Function Documentation | intlayer\ndescription: See how to use the getTranslation function for intlayer package\nkeywords:\n  - getTranslation\n  - translation\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Next.js\n  - JavaScript\n  - React\nslugs:\n  - doc\n  - packages\n  - intlayer\n  - getTranslation\nhistory:\n  - version: 5.5.10\n    date: 2025-06-29\n    changes: Init history\n---\n\n# Documentation: `getTranslationContent` Function in `intlayer`\n\n## Description\n\nThe `getTranslation` function (also aliased as `t`) retrieves the content corresponding to a specific locale from a set of customizable language content. If the specified locale is not found, it defaults to returning the content for the default locale configured in the project.\n\nFor more details on how to declare translations, see the [Translation documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/dictionary/translation.md).\n\n## Parameters\n\n- `languageContent: CustomizableLanguageContent<Content>`\n  - **Description**: An object containing translations for various locales. Each key represents a locale, and its value is the corresponding content.\n  - **Type**: `CustomizableLanguageContent<Content>`\n    - `Content` can be any type, defaulting to `string`.\n\n- `locale: Locales`\n  - **Description**: The locale for which content is to be retrieved.\n  - **Type**: `Locales`\n\n## Returns\n\n- **Type**: `Content`\n- **Description**: The content corresponding to the specified locale. If the locale is not found, the content of the default locale is returned.\n\n## Example Usage\n\n### Basic Usage\n\n```typescript codeFormat=\"typescript\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.ENGLISH\n);\n\nconsole.log(content); // Output: \"Bonjour\"\n```\n\n```javascript codeFormat=\"esm\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.ENGLISH\n);\n\nconsole.log(content); // Output: \"Bonjour\"\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getTranslationContent, Locales } = require(\"intlayer\");\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.ENGLISH\n);\n\nconsole.log(content); // Output: \"Bonjour\"\n```\n\n### Missing Locale:\n\n```typescript codeFormat=\"typescript\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.SPANISH\n);\n\nconsole.log(content); // Output: \"Hello\" (default locale content)\n```\n\n```javascript codeFormat=\"esm\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.SPANISH\n);\n\nconsole.log(content); // Output: \"Hello\" (default locale content)\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getTranslationContent, Locales } = require(\"intlayer\");\n\nconst content = getTranslationContent(\n  {\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  },\n  Locales.SPANISH\n);\n\nconsole.log(content); // Output: \"Hello\" (default locale content)\n```\n\n### Using Custom Content Types:\n\n```typescript codeFormat=\"typescript\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst customContent = getTranslationContent<Record<string, string>>(\n  {\n    en: { greeting: \"Hello\" },\n    fr: { greeting: \"Bonjour\" },\n  },\n  Locales.FRENCH\n);\n\nconsole.log(customContent.greeting); // Output: \"Bonjour\"\n```\n\n```javascript codeFormat=\"esm\"\nimport { getTranslationContent, Locales } from \"intlayer\";\n\nconst customContent = getTranslationContent<Record<string, string>>(\n  {\n    en: { greeting: \"Hello\" },\n    fr: { greeting: \"Bonjour\" },\n  },\n  Locales.FRENCH\n);\n\nconsole.log(customContent.greeting); // Output: \"Bonjour\"\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getTranslationContent, Locales } = require(\"intlayer\");\n\nconst customContent = getTranslationContent<Record<string, string>>(\n  {\n    en: { greeting: \"Hello\" },\n    fr: { greeting: \"Bonjour\" },\n  },\n  Locales.FRENCH\n);\n\nconsole.log(customContent.greeting); // Output: \"Bonjour\"\n```\n\n## Edge Cases\n\n- **Locale Not Found:**\n  - When the `locale` is not found in the `languageContent`, the function returns the content for the default locale.\n- **Incomplete Language Content:**\n  - If a locale is partially defined, the function does not merge contents. It strictly retrieves the value of the specified locale or falls back to the default.\n- **TypeScript Enforcement:**\n  - If the locales in `languageContent` do not match the project configuration, TypeScript will enforce all required locales to be defined, ensuring the content is complete and type-safe.\n",
+  "createdAt": "2025-08-23",
+  "updatedAt": "2025-08-23",
+  "title": "getTranslation Function Documentation | intlayer",
+  "description": "See how to use the getTranslation function for intlayer package",
+  "keywords": [
+    "getTranslation",
+    "translation",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Next.js",
+    "JavaScript",
+    "React"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer",
+    "getTranslation"
+  ],
+  "history": [
+    {
+      "version": "5.5.10",
+      "date": "2025-06-29",
+      "changes": "Init history"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer/getTranslation.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/getTranslation.md",
+  "relativeUrl": "/doc/packages/intlayer/getTranslation",
+  "url": "https://intlayer.org/doc/packages/intlayer/getTranslation"
+}

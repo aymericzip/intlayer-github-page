@@ -1,0 +1,33 @@
+{
+  "id": "./docs/en/packages/react-intlayer/IntlayerProvider.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: IntlayerProvider Component Documentation | react-intlayer\ndescription: See how to use the IntlayerProvider component for react-intlayer package\nkeywords:\n  - IntlayerProvider\n  - react\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - react-intlayer\n  - IntlayerProvider\nhistory:\n  - version: 7.5.14\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# IntlayerProvider Component Documentation\n\nThe `IntlayerProvider` component is the main provider for Intlayer in React applications. It provides the Intlayer context to all its children.\n\n## Usage\n\n```tsx\nimport { IntlayerProvider } from \"react-intlayer\";\n\nconst App = ({ children }) => <IntlayerProvider>{children}</IntlayerProvider>;\n```\n\n## Props\n\n| Prop              | Type                              | Description                                       |\n| ----------------- | --------------------------------- | ------------------------------------------------- |\n| `locale`          | `LocalesValues`                   | The initial locale to use.                        |\n| `defaultLocale`   | `LocalesValues`                   | The default locale to use as a fallback.          |\n| `setLocale`       | `(locale: LocalesValues) => void` | A custom function to set the locale.              |\n| `disableEditor`   | `boolean`                         | Whether to disable the editor.                    |\n| `isCookieEnabled` | `boolean`                         | Whether to enable cookies for storing the locale. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "IntlayerProvider Component Documentation | react-intlayer",
+  "description": "See how to use the IntlayerProvider component for react-intlayer package",
+  "keywords": [
+    "IntlayerProvider",
+    "react",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "react-intlayer",
+    "IntlayerProvider"
+  ],
+  "history": [
+    {
+      "version": "7.5.14",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/react-intlayer/IntlayerProvider.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/react-intlayer/IntlayerProvider.md",
+  "relativeUrl": "/doc/packages/react-intlayer/IntlayerProvider",
+  "url": "https://intlayer.org/doc/packages/react-intlayer/IntlayerProvider"
+}

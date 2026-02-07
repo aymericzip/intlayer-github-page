@@ -5,6 +5,10 @@ const config: IntlayerConfig = {
     locales: [Locales.ENGLISH],
     defaultLocale: Locales.ENGLISH,
   },
+  content:{
+    codeDir: ['./src', '@intlayer/design-system'],
+    contentDir: ['./src', '@intlayer/design-system'],
+  }
 };
 
 export default config;

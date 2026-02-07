@@ -1,0 +1,32 @@
+{
+  "id": "./docs/en/packages/hono-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-29\nupdatedAt: 2026-01-29\ntitle: hono-intlayer Package Documentation\ndescription: Hono middleware for Intlayer, providing translation functions and locale detection.\nkeywords:\n  - hono-intlayer\n  - hono\n  - middleware\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - hono-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-29\n    changes: Unified documentation for all exports\n---\n\n# hono-intlayer Package\n\nThe `hono-intlayer` package provides a middleware for Hono applications to handle internationalization. It detects the user's locale and populates the context object.\n\n## Installation\n\n```bash\nnpm install hono-intlayer\n```\n\n## Exports\n\n### Middleware\n\nImport:\n\n```tsx\nimport { intlayer } from \"hono-intlayer\";\n```\n\n| Function   | Description                                                                                                                                                                                                                                                                        | Related Doc                                                                                                  |\n| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |\n| `intlayer` | Hono middleware that integrates Intlayer into your Hono application. Handles locale detection from storage (cookies, headers), populates the context with `t`, `getIntlayer`, and `getDictionary`, and sets up CLS namespace for programmatic access during the request lifecycle. | [intlayer](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/hono-intlayer/intlayer.md) |\n\n### Functions\n\nImport:\n\n```tsx\nimport { t, getIntlayer, getDictionary } from \"hono-intlayer\";\n```\n\n| Function        | Description                                                                                                                                                                                                                             | Related Doc                                                                                            |\n| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |\n| `t`             | Global translation function that retrieves content for the current locale in Hono. Utilizes CLS (Async Local Storage) and must be used within a request context managed by the `intlayer` middleware. Can also be accessed via context. | [translation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/dictionary/translation.md) |\n| `getIntlayer`   | Retrieves a dictionary by its key from the generated declaration and returns its content for the specified locale. Optimized version of `getDictionary`. Uses CLS to access request context. Can also be accessed via context.          | -                                                                                                      |\n| `getDictionary` | Processes dictionary objects and returns content for the specified locale. Processes `t()` translations, enumerations, markdown, HTML, etc. Uses CLS to access request context. Can also be accessed via context.                       | -                                                                                                      |\n",
+  "createdAt": "2026-01-29",
+  "updatedAt": "2026-01-29",
+  "title": "hono-intlayer Package Documentation",
+  "description": "Hono middleware for Intlayer, providing translation functions and locale detection.",
+  "keywords": [
+    "hono-intlayer",
+    "hono",
+    "middleware",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "hono-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-29",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/hono-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/hono-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/hono-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/hono-intlayer/exports"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "./docs/en/packages/intlayer/validatePrefix.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: validatePrefix Function Documentation | intlayer\ndescription: See how to use the validatePrefix function for intlayer package\nkeywords:\n  - validatePrefix\n  - translation\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - intlayer\n  - validatePrefix\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# validatePrefix Function Documentation\n\nThe `validatePrefix` function checks if a given prefix is a valid locale prefix according to the configuration.\n\n## Usage\n\n```ts\nimport { validatePrefix } from \"intlayer\";\n\nconst isValid = validatePrefix(\"/fr\");\n\n// Output: true\n```\n\n## Parameters\n\n| Parameter | Type     | Description             |\n| --------- | -------- | ----------------------- |\n| `prefix`  | `string` | The prefix to validate. |\n\n## Returns\n\n`true` if the prefix is valid, `false` otherwise.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "validatePrefix Function Documentation | intlayer",
+  "description": "See how to use the validatePrefix function for intlayer package",
+  "keywords": [
+    "validatePrefix",
+    "translation",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer",
+    "validatePrefix"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer/validatePrefix.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/validatePrefix.md",
+  "relativeUrl": "/doc/packages/intlayer/validatePrefix",
+  "url": "https://intlayer.org/doc/packages/intlayer/validatePrefix"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "./docs/en/cli/debug.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Debug Intlayer Command\ndescription: Learn how to debug and troubleshoot Intlayer CLI issues.\nkeywords:\n  - Debug\n  - Troubleshoot\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - debug\n---\n\n# Debug intlayer command\n\n## 1. **Ensure you're using the latest version**\n\nRun:\n\n```bash\nnpx intlayer --version                  # current locale intlayer version\nnpx intlayer@latest --version           # current latest intlayer version\n```\n\n## 2. **Check if the command is registered**\n\nYou can check with:\n\n```bash\nnpx intlayer --help                     # Shows the list of available commands and usage information\nnpx intlayer dictionary build --help    # Shows the list of available options for a command\n```\n\n## 3. **Restart your terminal**\n\nSometimes a terminal restart is needed to recognize new commands.\n\n## 4. **Clear npx cache (if you're stuck with an older version)**\n\n```bash\nnpx clear-npx-cache\n```\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Debug Intlayer Command",
+  "description": "Learn how to debug and troubleshoot Intlayer CLI issues.",
+  "keywords": [
+    "Debug",
+    "Troubleshoot",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "debug"
+  ],
+  "docKey": "./docs/en/cli/debug.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/debug.md",
+  "relativeUrl": "/doc/concept/cli/debug",
+  "url": "https://intlayer.org/doc/concept/cli/debug"
+}

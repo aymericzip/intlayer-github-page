@@ -1,0 +1,26 @@
+{
+  "id": "./docs/en/cli/pull.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Pull Dictionaries\ndescription: Learn how to pull dictionaries from the Intlayer editor and CMS.\nkeywords:\n  - Pull\n  - Dictionaries\n  - CLI\n  - Intlayer\n  - Editor\n  - CMS\nslugs:\n  - doc\n  - concept\n  - cli\n  - pull\n---\n\n# Pull Distant Dictionaries\n\n```bash\nnpx intlayer pull\n```\n\nIf [intlayer editor](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/intlayer_visual_editor.md) is installed, you can also pull dictionaries from the editor. By this way, you can overwrite the content of your dictionaries for the need of your application.\n\n## Aliases:\n\n- `npx intlayer dictionaries pull`\n- `npx intlayer dictionary pull`\n- `npx intlayer dic pull`\n\n## Arguments:\n\n**Dictionary options:**\n\n- **`-d, --dictionaries`**: Ids of the dictionaries to pull. If not specified, all dictionaries will be pulled.\n\n  > Example: `npx intlayer dictionary pull -d my-dictionary-id my-other-dictionary-id`\n\n- **`--dictionary`**: Ids of the dictionaries to pull (alias for --dictionaries).\n\n  > Example: `npx intlayer dictionary pull --dictionary my-dictionary-id my-other-dictionary-id`\n\n**Configuration options:**\n\n- **`--base-dir`**: Specify the base directory for the project. To retrieve the intlayer configuration, the command will look for the `intlayer.config.{ts,js,json,cjs,mjs}` file in the base directory.\n\n  > Example: `npx intlayer dictionary push --env-file .env.production.local`\n\n- **`--no-cache`**: Disable the cache.\n\n  > Example: `npx intlayer build --no-cache`\n\n**Environment variables options:**\n\n- **`--env`**: Specify the environment (e.g., `development`, `production`).\n- **`--env-file`**: Provide a custom environment file to load variables from.\n- **`--base-dir`**: Specify the base directory for the project. To retrieve the intlayer configuration, the command will look for the `intlayer.config.{ts,js,json,cjs,mjs}` file in the base directory.\n\n  > Example: `npx intlayer dictionary push --env-file .env.production.local`\n\n  > Example: `npx intlayer dictionary push --env production`\n\n**Output options:**\n\n- **`--new-dictionaries-path`** : Path to the directory where the new dictionaries will be saved. If not specified, the news dictionaries will be saved in the `./intlayer-dictionaries` directory of the project. If a `filePath` fields is specified in your dictionary content, the dictionaries will not consider this argument and will be saved in the specified `filePath` directory.\n\n**Log options:**\n\n- **`--verbose`**: Enable verbose logging for debugging. (default to true using CLI)\n\n## Example:\n\n```bash\nnpx intlayer dictionary pull --newDictionariesPath ./my-dictionaries-dir/\n```\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Pull Dictionaries",
+  "description": "Learn how to pull dictionaries from the Intlayer editor and CMS.",
+  "keywords": [
+    "Pull",
+    "Dictionaries",
+    "CLI",
+    "Intlayer",
+    "Editor",
+    "CMS"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "pull"
+  ],
+  "docKey": "./docs/en/cli/pull.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/pull.md",
+  "relativeUrl": "/doc/concept/cli/pull",
+  "url": "https://intlayer.org/doc/concept/cli/pull"
+}

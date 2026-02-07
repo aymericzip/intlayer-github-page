@@ -1,0 +1,25 @@
+{
+  "id": "./docs/en/packages/react-intlayer/useRewriteURL.md",
+  "content": "---\nupdatedAt: 2025-08-23\ncreatedAt: 2025-08-23\ntitle: useRewriteURL Hook Documentation\ndescription: React-specific hook for managing localized URL rewrites in Intlayer.\nkeywords:\n  - useRewriteURL\n  - react-intlayer\n  - react\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - react-intlayer\n  - useRewriteURL\n---\n\n# useRewriteURL Hook\n\nThe `useRewriteURL` hook is designed to manage localized URL rewrites on the client side. It automatically detects if the current URL should be corrected to a \"pretty\" localized version based on the user's locale and the rewrite rules defined in `intlayer.config.ts`.\n\nUnlike standard navigation, this hook uses `window.history.replaceState` to update the URL in the address bar without triggering a full page reload or a router navigation cycle.\n\n## Usage\n\nSimply call the hook in a client-side component.\n\n```tsx\nimport { useRewriteURL } from \"react-intlayer\";\n\nconst MyComponent = () => {\n  // Automatically correct /fr/tests to /fr/essais in the address bar if a rewrite rule exists\n  useRewriteURL();\n\n  return <div>My Component</div>;\n};\n```\n\n## How it works\n\n1. **Detection**: The hook monitors the current `window.location.pathname` and the user's `locale`.\n2. **Matching**: It uses the internal Intlayer engine to check if the current pathname matches a canonical route that has a prettier localized alias for the current locale.\n3. **URL Correction**: If a better alias is found (and it's different from the current path), the hook calls `window.history.replaceState` to update the browser URL while preserving the same canonical content and state.\n\n## Why use it?\n\n- **SEO**: Ensures that users always land on the single, authoritative pretty URL for a given language.\n- **Consistency**: Prevents inconsistencies where a user might manually type a canonical path (like `/fr/privacy-notice`) instead of the localized version (`/fr/politique-de-confidentialite`).\n- **Performance**: Updates the address bar without triggering unwanted router side-effects or component re-mounts.\n",
+  "updatedAt": "2025-08-23",
+  "createdAt": "2025-08-23",
+  "title": "useRewriteURL Hook Documentation",
+  "description": "React-specific hook for managing localized URL rewrites in Intlayer.",
+  "keywords": [
+    "useRewriteURL",
+    "react-intlayer",
+    "react",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "react-intlayer",
+    "useRewriteURL"
+  ],
+  "docKey": "./docs/en/packages/react-intlayer/useRewriteURL.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/react-intlayer/useRewriteURL.md",
+  "relativeUrl": "/doc/packages/react-intlayer/useRewriteURL",
+  "url": "https://intlayer.org/doc/packages/react-intlayer/useRewriteURL"
+}

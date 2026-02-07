@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/lynx-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: lynx-intlayer Package Documentation\ndescription: Lynx support for Intlayer, providing polyfills for locale support.\nkeywords:\n  - lynx-intlayer\n  - lynx\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - lynx-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# lynx-intlayer Package\n\nThe `lynx-intlayer` package provides the necessary tools to integrate Intlayer into Lynx applications.\n\n## Installation\n\n```bash\nnpm install lynx-intlayer\n```\n\n## Exports\n\n### Polyfill\n\nImport:\n\n```tsx\nimport \"lynx-intlayer\";\n```\n\n| Function           | Description                                                             |\n| ------------------ | ----------------------------------------------------------------------- |\n| `intlayerPolyfill` | Function that applies necessary polyfills for Lynx to support Intlayer. |\n\n### Rsbuild Plugin\n\nThe `lynx-intlayer` package provides an Rsbuild plugin to integrate Intlayer into the Lynx build process.\n\nImport:\n\n```tsx\nimport \"lynx-intlayer\";\n```\n\n| Function             | Description                                                  |\n| -------------------- | ------------------------------------------------------------ |\n| `pluginIntlayerLynx` | Rsbuild plugin that integrates Intlayer into the Lynx build. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "lynx-intlayer Package Documentation",
+  "description": "Lynx support for Intlayer, providing polyfills for locale support.",
+  "keywords": [
+    "lynx-intlayer",
+    "lynx",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "lynx-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/lynx-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/lynx-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/lynx-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/lynx-intlayer/exports"
+}

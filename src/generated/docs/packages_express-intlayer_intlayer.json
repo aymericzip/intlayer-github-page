@@ -1,0 +1,34 @@
+{
+  "id": "./docs/en/packages/express-intlayer/intlayer.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: intlayer Express Middleware Documentation | express-intlayer\ndescription: See how to use the intlayer middleware for express-intlayer package\nkeywords:\n  - intlayer\n  - express\n  - middleware\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - express-intlayer\n  - intlayer\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# intlayer Express Middleware Documentation\n\nThe `intlayer` middleware for Express detects the user's locale and provides translation functions through the `res.locals` object. It also enables the use of the `t` and `getIntlayer` functions throughout your request handlers.\n\n## Usage\n\n```ts\nimport express from \"express\";\nimport { intlayer } from \"express-intlayer\";\n\nconst app = express();\n\napp.use(intlayer());\n\napp.get(\"/\", (req, res) => {\n  const content = res.locals.t({\n    en: \"Hello\",\n    fr: \"Bonjour\",\n  });\n\n  res.send(content);\n});\n```\n\n## Description\n\nThe middleware performs the following tasks:\n\n1. **Locale Detection**: It checks cookies, headers (like `Accept-Language`), and URL parameters to determine the user's locale.\n2. **Context Setup**: it populates `res.locals` with:\n   - `locale`: The detected locale.\n   - `t`: A translation function bound to the detected locale.\n   - `getIntlayer`: A function to retrieve dictionaries bound to the detected locale.\n3. **Async Local Storage**: it sets up a context that allows the use of global `t` and `getIntlayer` functions imported from `express-intlayer` within the request flow.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "intlayer Express Middleware Documentation | express-intlayer",
+  "description": "See how to use the intlayer middleware for express-intlayer package",
+  "keywords": [
+    "intlayer",
+    "express",
+    "middleware",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "express-intlayer",
+    "intlayer"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/express-intlayer/intlayer.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/express-intlayer/intlayer.md",
+  "relativeUrl": "/doc/packages/express-intlayer/intlayer",
+  "url": "https://intlayer.org/doc/packages/express-intlayer/intlayer"
+}

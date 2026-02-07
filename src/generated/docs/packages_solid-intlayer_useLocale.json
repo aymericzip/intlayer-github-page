@@ -1,0 +1,35 @@
+{
+  "id": "./docs/en/packages/solid-intlayer/useLocale.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: useLocale Hook Documentation | solid-intlayer\ndescription: See how to use the useLocale hook for solid-intlayer package\nkeywords:\n  - useLocale\n  - locale\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Solid\n  - Solid.js\nslugs:\n  - doc\n  - packages\n  - solid-intlayer\n  - useLocale\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# useLocale Hook Documentation\n\nThe `useLocale` hook allows you to manage the current locale in your Solid application. It provides access to the current locale (as an accessor), the default locale, available locales, and a function to update the locale.\n\n## Usage\n\n```tsx\nimport { useLocale } from \"solid-intlayer\";\n\nconst LocaleSwitcher = () => {\n  const { locale, setLocale, availableLocales } = useLocale();\n\n  return (\n    <select value={locale()} onChange={(e) => setLocale(e.currentTarget.value)}>\n      {availableLocales.map((loc) => (\n        <option value={loc} selected={loc === locale()}>\n          {loc}\n        </option>\n      ))}\n    </select>\n  );\n};\n```\n\n## Description\n\nThe hook returns an object with the following properties:\n\n1. **locale**: A Solid accessor (`() => string`) returning the current locale.\n2. **defaultLocale**: The default locale defined in your `intlayer.config.ts`.\n3. **availableLocales**: An array of all locales supported by your application.\n4. **setLocale**: A function to update the application's locale. It also handles persistence (cookies/local storage) if enabled.\n\n## Parameters\n\n- **props** (optional):\n  - **onLocaleChange**: A callback function called whenever the locale changes.\n  - **isCookieEnabled**: Whether to persist the locale in a cookie.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "useLocale Hook Documentation | solid-intlayer",
+  "description": "See how to use the useLocale hook for solid-intlayer package",
+  "keywords": [
+    "useLocale",
+    "locale",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Solid",
+    "Solid.js"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "solid-intlayer",
+    "useLocale"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/solid-intlayer/useLocale.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/useLocale.md",
+  "relativeUrl": "/doc/packages/solid-intlayer/useLocale",
+  "url": "https://intlayer.org/doc/packages/solid-intlayer/useLocale"
+}

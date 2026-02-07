@@ -1,0 +1,25 @@
+{
+  "id": "./docs/en/cli/configuration.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Manage Configuration\ndescription: Learn how to get and push your Intlayer configuration to the CMS.\nkeywords:\n  - Configuration\n  - Config\n  - CLI\n  - Intlayer\n  - CMS\nslugs:\n  - doc\n  - concept\n  - cli\n  - configuration\n---\n\n# Manage Configuration\n\n## Get Configuration\n\nThe `configuration get` command retrieves the current configuration for Intlayer, particularly the locale settings. This is useful for verifying your setup.\n\n```bash\nnpx intlayer configuration get\n```\n\n## Aliases:\n\n- `npx intlayer config get`\n- `npx intlayer conf get`\n\n## Arguments:\n\n- **`--env`**: Specify the environment (e.g., `development`, `production`).\n- **`--env-file`**: Provide a custom environment file to load variables from.\n- **`--base-dir`**: Specify the base directory for the project.\n- **`--verbose`**: Enable verbose logging for debugging. (default to true using CLI)\n- **`--no-cache`**: Disable the cache.\n\n## Push Configuration\n\nThe `configuration push` command uploads your configuration to the Intlayer CMS and editor. This step is necessary to enable the use of distant dictionaries in the Intlayer Visual Editor.\n\n```bash\nnpx intlayer configuration push\n```\n\n## Aliases:\n\n- `npx intlayer config push`\n- `npx intlayer conf push`\n\n## Arguments:\n\n- **`--env`**: Specify the environment (e.g., `development`, `production`).\n- **`--env-file`**: Provide a custom environment file to load variables from.\n- **`--base-dir`**: Specify the base directory for the project.\n- **`--verbose`**: Enable verbose logging for debugging. (default to true using CLI)\n- **`--no-cache`**: Disable the cache.\n\nBy pushing the configuration, your project is fully integrated with the Intlayer CMS, enabling seamless dictionary management across teams.\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Manage Configuration",
+  "description": "Learn how to get and push your Intlayer configuration to the CMS.",
+  "keywords": [
+    "Configuration",
+    "Config",
+    "CLI",
+    "Intlayer",
+    "CMS"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "configuration"
+  ],
+  "docKey": "./docs/en/cli/configuration.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/configuration.md",
+  "relativeUrl": "/doc/concept/cli/configuration",
+  "url": "https://intlayer.org/doc/concept/cli/configuration"
+}

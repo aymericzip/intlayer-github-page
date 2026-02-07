@@ -1,0 +1,35 @@
+{
+  "id": "./docs/en/packages/solid-intlayer/IntlayerProvider.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: IntlayerProvider Component Documentation | solid-intlayer\ndescription: See how to use the IntlayerProvider component for solid-intlayer package\nkeywords:\n  - IntlayerProvider\n  - provider\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Solid\n  - Solid.js\nslugs:\n  - doc\n  - packages\n  - solid-intlayer\n  - IntlayerProvider\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# IntlayerProvider Component Documentation\n\nThe `IntlayerProvider` is the root component that provides the internationalization context to your Solid application. It manages the current locale state and ensures that all child components can access translations.\n\n## Usage\n\n```tsx\nimport { IntlayerProvider } from \"solid-intlayer\";\n\nconst App = () => (\n  <IntlayerProvider>\n    <MyComponent />\n  </IntlayerProvider>\n);\n```\n\n## Description\n\nThe `IntlayerProvider` performs the following roles:\n\n1. **State Management**: It initializes and stores the current locale, using signals for reactivity.\n2. **Locale Resolution**: It determines the initial locale based on cookies, browser preferences, or the default configuration.\n3. **Context Injection**: It makes the locale and the `setLocale` function available to any component via hooks like `useIntlayer` or `useLocale`.\n4. **Persistence**: It automatically syncs locale changes with cookies or local storage to maintain the user's preference across sessions.\n\n## Props\n\n- **locale** (optional): Manually set the current locale.\n- **defaultLocale** (optional): Override the default locale from the configuration.\n- **setLocale** (optional): Provide a custom locale setter function.\n- **disableEditor** (optional): Disable the visual editor integration.\n- **isCookieEnabled** (optional): Enable or disable cookie persistence.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "IntlayerProvider Component Documentation | solid-intlayer",
+  "description": "See how to use the IntlayerProvider component for solid-intlayer package",
+  "keywords": [
+    "IntlayerProvider",
+    "provider",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Solid",
+    "Solid.js"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "solid-intlayer",
+    "IntlayerProvider"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/solid-intlayer/IntlayerProvider.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/IntlayerProvider.md",
+  "relativeUrl": "/doc/packages/solid-intlayer/IntlayerProvider",
+  "url": "https://intlayer.org/doc/packages/solid-intlayer/IntlayerProvider"
+}

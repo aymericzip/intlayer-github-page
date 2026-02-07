@@ -1,0 +1,25 @@
+{
+  "id": "./docs/en/packages/vue-intlayer/useRewriteURL.md",
+  "content": "---\nupdatedAt: 2025-08-23\ncreatedAt: 2025-08-23\ntitle: useRewriteURL Composable Documentation\ndescription: Vue-specific composable for managing localized URL rewrites in Intlayer.\nkeywords:\n  - useRewriteURL\n  - vue-intlayer\n  - vue\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - vue-intlayer\n  - useRewriteURL\n---\n\n# useRewriteURL Composable\n\nThe `useRewriteURL` composable for Vue 3 is designed to handle localized URL rewrites on the client side. It automatically corrects the browser's URL to its \"pretty\" localized version based on the user's current locale and the configuration in `intlayer.config.ts`.\n\nIt works by using `window.history.replaceState`, which avoids triggering unwanted Vue Router navigations.\n\n## Usage\n\nCall the composable within your `setup()` function or `<script setup>`.\n\n```vue\n<script setup>\nimport { useRewriteURL } from \"vue-intlayer\";\n\n// Automatically correct /fr/tests to /fr/essais in the address bar if a rewrite rule exists\nuseRewriteURL();\n</script>\n\n<template>\n  <router-view />\n</template>\n```\n\n## How it works\n\n1. **Reactive Monitoring**: The composable sets up a `watch` on the user's `locale`.\n2. **Rewrite Matching**: Whenever the locale changes (or on mount), it checks if the current `window.location.pathname` matches a canonical route that has a prettier localized alias.\n3. **URL Correction**: If a prettier alias is found, the composable calls `window.history.replaceState` to update the address bar without reloading the page or losing router state.\n\n## Why use it?\n\n- **SEO Optimization**: Ensures search engines index the authoritative localized version of your URLs.\n- **Improved UX**: Corrects manually entered URLs to reflect your preferred naming (e.g., `/fr/a-propos` instead of `/fr/about`).\n- **Low Overhead**: Silently updates the URL without re-triggering component lifecycles or navigation guards.\n\n---\n",
+  "updatedAt": "2025-08-23",
+  "createdAt": "2025-08-23",
+  "title": "useRewriteURL Composable Documentation",
+  "description": "Vue-specific composable for managing localized URL rewrites in Intlayer.",
+  "keywords": [
+    "useRewriteURL",
+    "vue-intlayer",
+    "vue",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "vue-intlayer",
+    "useRewriteURL"
+  ],
+  "docKey": "./docs/en/packages/vue-intlayer/useRewriteURL.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vue-intlayer/useRewriteURL.md",
+  "relativeUrl": "/doc/packages/vue-intlayer/useRewriteURL",
+  "url": "https://intlayer.org/doc/packages/vue-intlayer/useRewriteURL"
+}

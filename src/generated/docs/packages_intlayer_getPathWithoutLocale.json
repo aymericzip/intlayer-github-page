@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/packages/intlayer/getPathWithoutLocale.md",
+  "content": "---\ncreatedAt: 2025-08-23\nupdatedAt: 2025-08-23\ntitle: getPathWithoutLocale Function Documentation | intlayer\ndescription: See how to use the getPathWithoutLocale function for intlayer package\nkeywords:\n  - getPathWithoutLocale\n  - translation\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Next.js\n  - JavaScript\n  - React\nslugs:\n  - doc\n  - packages\n  - intlayer\n  - getPathWithoutLocale\nhistory:\n  - version: 5.5.10\n    date: 2025-06-29\n    changes: Init history\n---\n\n# Documentation: `getPathWithoutLocale` Functions in `intlayer`\n\n## Description\n\nRemoves the locale segment from the given URL or pathname if present. It works with both absolute URLs and relative pathnames.\n\n## Parameters\n\n- `inputUrl: string`\n  - **Description**: The complete URL string or pathname to process.\n  - **Type**: `string`\n\n- `locales: Locales[]`\n  - **Description**: Optional array of supported locales. Defaults to the configured locales in the project.\n  - **Type**: `Locales[]`\n\n## Returns\n\n- **Type**: `string`\n- **Description**: The URL string or pathname without the locale segment.\n\n## Example Usage\n\n```typescript codeFormat=\"typescript\"\nimport { getPathWithoutLocale } from \"intlayer\";\n\nconsole.log(getPathWithoutLocale(\"/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/en/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/fr/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"https://example.com/en/dashboard\")); // Output: \"https://example.com/dashboard\"\n```\n\n```javascript codeFormat=\"esm\"\nimport { getPathWithoutLocale } from \"intlayer\";\n\nconsole.log(getPathWithoutLocale(\"/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/en/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/fr/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"https://example.com/en/dashboard\")); // Output: \"https://example.com/dashboard\"\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getPathWithoutLocale } = require(\"intlayer\");\n\nconsole.log(getPathWithoutLocale(\"/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/en/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"/fr/dashboard\")); // Output: \"/dashboard\"\nconsole.log(getPathWithoutLocale(\"https://example.com/en/dashboard\")); // Output: \"https://example.com/dashboard\"\n```\n",
+  "createdAt": "2025-08-23",
+  "updatedAt": "2025-08-23",
+  "title": "getPathWithoutLocale Function Documentation | intlayer",
+  "description": "See how to use the getPathWithoutLocale function for intlayer package",
+  "keywords": [
+    "getPathWithoutLocale",
+    "translation",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Next.js",
+    "JavaScript",
+    "React"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer",
+    "getPathWithoutLocale"
+  ],
+  "history": [
+    {
+      "version": "5.5.10",
+      "date": "2025-06-29",
+      "changes": "Init history"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer/getPathWithoutLocale.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/getPathWithoutLocale.md",
+  "relativeUrl": "/doc/packages/intlayer/getPathWithoutLocale",
+  "url": "https://intlayer.org/doc/packages/intlayer/getPathWithoutLocale"
+}

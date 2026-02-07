@@ -1,0 +1,30 @@
+{
+  "id": "./docs/en/packages/astro-intlayer.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: astro-intlayer Package Documentation\ndescription: Astro integration for Intlayer, providing setup for locale-based routing and dictionary management.\nkeywords:\n  - astro-intlayer\n  - astro\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - astro-intlayer\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# astro-intlayer Package\n\nThe `astro-intlayer` package provides the necessary tools to integrate Intlayer into Astro applications. It configures locale-based routing and dictionary management.\n\n## Installation\n\n```bash\nnpm install astro-intlayer\n```\n\n## Exports\n\n### Integration\n\n| Function   | Description                                              |\n| ---------- | -------------------------------------------------------- |\n| `intlayer` | Astro integration that sets up Intlayer in your project. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "astro-intlayer Package Documentation",
+  "description": "Astro integration for Intlayer, providing setup for locale-based routing and dictionary management.",
+  "keywords": [
+    "astro-intlayer",
+    "astro",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "astro-intlayer"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/astro-intlayer.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/astro-intlayer.md",
+  "relativeUrl": "/doc/packages/astro-intlayer",
+  "url": "https://intlayer.org/doc/packages/astro-intlayer"
+}

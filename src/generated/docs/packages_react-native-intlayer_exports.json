@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/react-native-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: react-native-intlayer Package Documentation\ndescription: React Native support for Intlayer, providing providers and polyfills.\nkeywords:\n  - react-native-intlayer\n  - react-native\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - react-native-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# react-native-intlayer Package\n\nThe `react-native-intlayer` package provides the necessary tools to integrate Intlayer into React Native applications. It includes a provider and polyfills for locale support.\n\n## Installation\n\n```bash\nnpm install react-native-intlayer\n```\n\n## Exports\n\n### Provider\n\n| Component          | Description                                                                       |\n| ------------------ | --------------------------------------------------------------------------------- |\n| `IntlayerProvider` | Provider component that wraps your application and provides the Intlayer context. |\n\nImport:\n\n```tsx\nimport \"react-native-intlayer\";\n```\n\n### Polyfill\n\n| Function           | Description                                                                     |\n| ------------------ | ------------------------------------------------------------------------------- |\n| `intlayerPolyfill` | Function that applies necessary polyfills for React Native to support Intlayer. |\n\nImport:\n\n```tsx\nimport \"react-native-intlayer\";\n```\n\n### Metro Configuration\n\nThe `react-native-intlayer` package provides Metro configuration utilities to ensure that Intlayer works correctly with React Native.\n\n| Function                  | Description                                                                                    |\n| ------------------------- | ---------------------------------------------------------------------------------------------- |\n| `configMetroIntlayer`     | Asynchronous function that prepares Intlayer and merges the Metro configuration.               |\n| `configMetroIntlayerSync` | Synchronous function that merges the Metro configuration without preparing Intlayer resources. |\n| `exclusionList`           | Creates a RegExp pattern for Metro's blockList to exclude content files from the bundle.       |\n\nImport:\n\n```tsx\nimport \"react-native-intlayer/metro\";\n```\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "react-native-intlayer Package Documentation",
+  "description": "React Native support for Intlayer, providing providers and polyfills.",
+  "keywords": [
+    "react-native-intlayer",
+    "react-native",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "react-native-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/react-native-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/react-native-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/react-native-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/react-native-intlayer/exports"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "./docs/en/packages/vite-intlayer/intlayer.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: intlayer Vite Plugin Documentation | vite-intlayer\ndescription: See how to use the intlayer plugin for vite-intlayer package\nkeywords:\n  - intlayer\n  - vite\n  - plugin\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\nslugs:\n  - doc\n  - packages\n  - vite-intlayer\n  - intlayer\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Init doc\n---\n\n# intlayer Vite Plugin Documentation\n\nThe `intlayer` Vite plugin integrates Intlayer configuration into the build process. It handles dictionary aliases, starts the dictionary watcher in development mode, and prepares dictionaries for the build.\n\n## Usage\n\n```ts\n// vite.config.ts\nimport { defineConfig } from \"vite\";\nimport { intlayer } from \"vite-intlayer\";\n\nexport default defineConfig({\n  plugins: [intlayer()],\n});\n```\n\n## Description\n\nThe plugin performs the following tasks:\n\n1. **Prepare Dictionaries**: It compiles the dictionaries into optimized files at the start of the build or dev process.\n2. **Watch Mode**: In development mode, it watches for changes in dictionary files and recompiles them automatically.\n3. **Aliases**: it provides aliases for accessing the dictionaries in your application.\n4. **Tree-shaking**: it supports tree-shaking unused translations through the `intlayerPrune` plugin.\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "intlayer Vite Plugin Documentation | vite-intlayer",
+  "description": "See how to use the intlayer plugin for vite-intlayer package",
+  "keywords": [
+    "intlayer",
+    "vite",
+    "plugin",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "vite-intlayer",
+    "intlayer"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Init doc"
+    }
+  ],
+  "docKey": "./docs/en/packages/vite-intlayer/intlayer.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vite-intlayer/intlayer.md",
+  "relativeUrl": "/doc/packages/vite-intlayer/intlayer",
+  "url": "https://intlayer.org/doc/packages/vite-intlayer/intlayer"
+}

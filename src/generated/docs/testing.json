@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/testing.md",
+  "content": "---\ncreatedAt: 2025-03-01\nupdatedAt: 2025-10-05\ntitle: Testing your content\ndescription: Discover how to test your content with Intlayer.\nkeywords:\n  - Testing\n  - Intlayer\n  - Internationalization\n  - CMS\n  - Content Management System\n  - Visual Editor\nslugs:\n  - doc\n  - testing\nhistory:\n  - version: 6.0.1\n    date: 2025-10-05\n    changes: Make test async and add build option\n  - version: 6.0.0\n    date: 2025-09-20\n    changes: Introduction of testing\n---\n\n# Testing your content\n\nThis guide shows how to automatically verify your dictionaries are complete, catch missing translations before shipping, and test localized UI in your app.\n\n---\n\n## What you can test\n\n- **Missing translations**: fail CI if any required locales are missing for any dictionary.\n- **Localized UI rendering**: render components with a specific locale provider and assert on visible text/attributes.\n- **Build-time audits**: run a quick audit locally via CLI.\n\n---\n\n## Quick start: audit via CLI\n\nRun the audit from your project root:\n\n```bash\nnpx intlayer content test\n```\n\nUseful flags:\n\n- `--env-file [path]`: load environment variables from a file.\n- `-e, --env [name]`: select an environment profile.\n- `--base-dir [path]`: set the app base directory for resolution.\n- `--verbose`: show verbose logs.\n- `--prefix [label]`: prefix log lines.\n- `--build [build]`: build the dictionaries before testing to ensure the content is up to date. True will force the build, false will skip the build, undefined will allow using the cache of the build.\n\nNote: the CLI prints a detailed report but does not exit non‑zero on failures. For CI gating, add a unit test (below) that asserts zero missing required locales.\n\n---\n\n## Programmatic test (Vitest/Jest)\n\nUse the Intlayer CLI API to assert there are no missing translations for your required locales.\n\n```ts fileName=i18n.test.ts\n/* @vitest-environment node */\nimport { listMissingTranslations } from \"intlayer/cli\";\nimport { describe, expect, it } from \"vitest\";\n\ndescribe(\"translations\", () => {\n  it(\"has no missing required locales\", async () => {\n    const result = await listMissingTranslations();\n\n    if (result.missingRequiredLocales.length > 0) {\n      // Helpful when the test fails locally or in CI\n      console.log(result.missingTranslations);\n    }\n\n    expect(result.missingRequiredLocales).toHaveLength(0);\n  });\n});\n```\n\nJest equivalent:\n\n```ts fileName=i18n.test.ts\nimport { listMissingTranslations } from \"intlayer/cli\";\n\ntest(\"has no missing required locales\", async () => {\n  const result = await listMissingTranslations();\n\n  if (result.missingRequiredLocales.length > 0) {\n    // Helpful when the test fails locally or in CI\n    console.log(result.missingTranslations);\n  }\n\n  expect(result.missingRequiredLocales).toHaveLength(0);\n});\n```\n\nHow it works:\n\n- Intlayer reads your configuration (locales, requiredLocales) and declared dictionaries, then reports:\n  - `missingTranslations`: per‑key, which locales are missing and from which file.\n  - `missingLocales`: union of all missing locales.\n  - `missingRequiredLocales`: subset limited to `requiredLocales` (or all locales if `requiredLocales` is not set).\n\n---\n\n## Testing localized UI (React / Next.js)\n\nRender components under an Intlayer provider and assert on visible content.\n\nReact example (Testing Library):\n\n```tsx\nimport { IntlayerProvider } from \"react-intlayer/client\";\nimport { render, screen } from \"@testing-library/react\";\nimport { MyComponent } from \"./MyComponent\";\n\ntest(\"renders localized title in English\", () => {\n  render(\n    <IntlayerProvider locale=\"en-US\">\n      <MyComponent />\n    </IntlayerProvider>\n  );\n\n  expect(screen.getByText(\"Expected English title\")).toBeInTheDocument();\n});\n```\n\nNext.js (App Router) example: use the framework wrapper:\n\n```tsx\nimport { IntlayerClientProvider } from \"next-intlayer/client\";\nimport { render, screen } from \"@testing-library/react\";\nimport { MyPage } from \"./MyPage\";\n\ntest(\"renders localized heading in French\", () => {\n  render(\n    <IntlayerClientProvider locale=\"fr-FR\">\n      <MyPage />\n    </IntlayerClientProvider>\n  );\n  expect(\n    screen.getByRole(\"heading\", { name: \"Titre attendu\" })\n  ).toBeInTheDocument();\n});\n```\n\nTips:\n\n- When you need raw string values for attributes (e.g., `aria-label`), access the `.value` field returned by `useIntlayer` in React.\n- Keep dictionaries colocated with components for easier unit testing and cleanup.\n\n---\n\n## Continuous Integration\n\nAdd a test that fails the build when required translations are missing.\n\n`package.json`:\n\n```json\n{\n  \"scripts\": {\n    \"test:i18n\": \"vitest run -c\"\n  }\n}\n```\n\nGitHub Actions example:\n\n```yaml\nname: CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - run: npm ci\n      - run: npm run test:i18n\n```\n\nOptional: run the CLI audit for a human-readable summary alongside tests:\n\n```bash\nnpx intlayer content test --verbose\n```\n\n---\n\n## Troubleshooting\n\n- Ensure your Intlayer configuration defines `locales` and (optionally) `requiredLocales`.\n- If your app uses dynamic or remote dictionaries, run tests in an environment where the dictionaries are available.\n- For mixed monorepos, use `--base-dir` to point the CLI at the correct application root.\n\n---\n",
+  "createdAt": "2025-03-01",
+  "updatedAt": "2025-10-05",
+  "title": "Testing your content",
+  "description": "Discover how to test your content with Intlayer.",
+  "keywords": [
+    "Testing",
+    "Intlayer",
+    "Internationalization",
+    "CMS",
+    "Content Management System",
+    "Visual Editor"
+  ],
+  "slugs": [
+    "doc",
+    "testing"
+  ],
+  "history": [
+    {
+      "version": "6.0.1",
+      "date": "2025-10-05",
+      "changes": "Make test async and add build option"
+    },
+    {
+      "version": "6.0.0",
+      "date": "2025-09-20",
+      "changes": "Introduction of testing"
+    }
+  ],
+  "docKey": "./docs/en/testing.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/testing.md",
+  "relativeUrl": "/doc/testing",
+  "url": "https://intlayer.org/doc/testing"
+}

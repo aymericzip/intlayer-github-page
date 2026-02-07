@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/solid-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: solid-intlayer Package Documentation\ndescription: Solid-specific integration for Intlayer, providing providers and hooks for Solid applications.\nkeywords:\n  - solid-intlayer\n  - solidjs\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - solid-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# solid-intlayer Package\n\nThe `solid-intlayer` package provides the necessary tools to integrate Intlayer into Solid applications. It includes providers and hooks for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install solid-intlayer\n```\n\n## Exports\n\n### Provider\n\nImport:\n\n```tsx\nimport \"solid-intlayer\";\n```\n\n| Component          | Description                                                                      | Related Doc                                                                                                                   |\n| ------------------ | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |\n| `IntlayerProvider` | The main provider that wraps your application and provides the Intlayer context. | [IntlayerProvider](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/IntlayerProvider.md) |\n\n### Hooks\n\nImport:\n\n```tsx\nimport \"solid-intlayer\";\n```\n\n| Hook                   | Description                                                                                                       | Related Doc                                                                                                             |\n| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |\n| `useIntlayer`          | Based on `useDictionary`, but injects an optimized version of the dictionary from the generated declaration.      | [useIntlayer](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/useIntlayer.md)     |\n| `useDictionary`        | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. | -                                                                                                                       |\n| `useDictionaryAsync`   | Same as `useDictionary`, but handles asynchronous dictionaries.                                                   | -                                                                                                                       |\n| `useDictionaryDynamic` | Same as `useDictionary`, but handles dynamic dictionaries.                                                        | -                                                                                                                       |\n| `useLocale`            | Returns the current locale and a function to set it.                                                              | [useLocale](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/useLocale.md)         |\n| `useRewriteURL`        | Client-side hook to manage URL rewrites. Automatically updates the URL if a localized rewrite rule exists.        | [useRewriteURL](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/useRewriteURL.md) |\n| `useIntl`              | Returns the Intl object for the current locale.                                                                   | -                                                                                                                       |\n| `useLoadDynamic`       | Hook to load dynamic dictionaries.                                                                                | -                                                                                                                       |\n| `t`                    | Picks content based on the current locale.                                                                        | [translation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/dictionary/translation.md)                  |\n\n### Components\n\nImport:\n\n```tsx\nimport \"solid-intlayer\";\n```\n\n| Component          | Description                              |\n| ------------------ | ---------------------------------------- |\n| `MarkdownProvider` | Provider for markdown rendering context. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "solid-intlayer Package Documentation",
+  "description": "Solid-specific integration for Intlayer, providing providers and hooks for Solid applications.",
+  "keywords": [
+    "solid-intlayer",
+    "solidjs",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "solid-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/solid-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/solid-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/solid-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/solid-intlayer/exports"
+}

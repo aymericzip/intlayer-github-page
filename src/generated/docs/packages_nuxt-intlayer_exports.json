@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/nuxt-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: nuxt-intlayer Package Documentation\ndescription: Nuxt integration for Intlayer, providing a module for Nuxt applications.\nkeywords:\n  - nuxt-intlayer\n  - nuxt\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - nuxt-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# nuxt-intlayer Package\n\nThe `nuxt-intlayer` package provides a Nuxt module to integrate Intlayer into your Nuxt project.\n\n## Installation\n\n```bash\nnpm install nuxt-intlayer\n```\n\n## Exports\n\n### Module\n\nThe `nuxt-intlayer` package provides a Nuxt module to integrate Intlayer into your Nuxt project.\n\nImport:\n\n```tsx\nimport \"nuxt-intlayer\";\n```\n\nor adding to `nuxt.config.ts`:\n\n```ts\nexport default defineNuxtConfig({\n  modules: [\"nuxt-intlayer\"],\n});\n```\n\n| Export    | Type         | Description                                                     |\n| --------- | ------------ | --------------------------------------------------------------- |\n| `default` | `NuxtModule` | The default export is the Nuxt module that configures Intlayer. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "nuxt-intlayer Package Documentation",
+  "description": "Nuxt integration for Intlayer, providing a module for Nuxt applications.",
+  "keywords": [
+    "nuxt-intlayer",
+    "nuxt",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "nuxt-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/nuxt-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/nuxt-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/nuxt-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/nuxt-intlayer/exports"
+}

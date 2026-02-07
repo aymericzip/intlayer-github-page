@@ -1,0 +1,32 @@
+{
+  "id": "./docs/en/cli/list_projects.md",
+  "content": "---\ncreatedAt: 2025-12-30\nupdatedAt: 2025-12-30\ntitle: List Intlayer Projects\ndescription: Learn how to list all Intlayer projects in a directory or git repository.\nkeywords:\n  - List\n  - Projects\n  - CLI\n  - Intlayer\n  - Git\nslugs:\n  - doc\n  - concept\n  - cli\n  - list-projects\nhistory:\n  - version: 7.5.12\n    date: 2026-01-06\n    changes: Add absolute output option to list projects command\n---\n\n# List Intlayer Projects\n\n```bash\nnpx intlayer projects list\n```\n\nThis command searches for and lists all Intlayer projects by finding directories that contain Intlayer configuration files. It's useful for discovering all Intlayer projects in a monorepo, workspace, or git repository.\n\n## Aliases:\n\n- `npx intlayer projects-list`\n- `npx intlayer pl`\n\n## Arguments:\n\n- **`--base-dir [path]`**: Specify the base directory to search from. Defaults to the current working directory.\n\n  > Example: `npx intlayer projects list --base-dir /path/to/workspace`\n\n- **`--git-root`**: Search from the git root directory instead of the base directory. This is useful for finding all Intlayer projects in a monorepo or git repository.\n\n  > Example: `npx intlayer projects list --git-root`\n\n- **`--json`**: Output the results as JSON instead of formatted text. Useful for scripting and programmatic access.\n\n  > Example: `npx intlayer projects list --json`\n\n- **`--absolute`**: Output the results as absolute paths instead of relative paths.\n\n  > Example: `npx intlayer projects list --absolute`\n\n## How it works:\n\nThe command searches for Intlayer configuration files in the specified directory (or git root if `--git-root` is used). It looks for the following configuration file patterns:\n\n- `intlayer.config.ts`\n- `intlayer.config.js`\n- `intlayer.config.json`\n- `intlayer.config.cjs`\n- `intlayer.config.mjs`\n- `.intlayerrc`\n\nEach directory containing one of these files is considered an Intlayer project and will be listed in the output.\n\n## Examples:\n\n### List projects in current directory:\n\n```bash\nnpx intlayer projects list\n```\n\n### List projects in a specific directory:\n\n```bash\nnpx intlayer projects list --base-dir ./packages\n```\n\n### List all projects in the git repository:\n\n```bash\nnpx intlayer projects list --git-root\n```\n\n### Using the shortcut alias:\n\n```bash\nnpx intlayer pl --git-root\n```\n\n### Output as JSON:\n\n```bash\nnpx intlayer projects list --json\n```\n\n## Example output:\n\n### Formatted output:\n\n```bash\n$ npx intlayer projects list --git-root\n\nFound 3 Intlayer project(s):\n\n  - /Users/user/workspace/packages/app\n  - /Users/user/workspace/packages/admin\n  - /Users/user/workspace/packages/shared\n```\n\n### JSON output:\n\n```bash\n$ npx intlayer projects list --json\n\n[\"/Users/user/workspace/packages/app\",\"/Users/user/workspace/packages/admin\",\"/Users/user/workspace/packages/shared\"]\n```\n\n## Use cases:\n\n- **Monorepo management**: Discover all Intlayer projects in a monorepo structure\n- **Project discovery**: Find all Intlayer-enabled projects in a workspace\n- **CI/CD**: Verify Intlayer projects in automated workflows\n- **Documentation**: Generate documentation listing all projects using Intlayer\n\nThe output provides absolute paths to each project directory, making it easy to navigate to or script operations on multiple Intlayer projects.\n",
+  "createdAt": "2025-12-30",
+  "updatedAt": "2025-12-30",
+  "title": "List Intlayer Projects",
+  "description": "Learn how to list all Intlayer projects in a directory or git repository.",
+  "keywords": [
+    "List",
+    "Projects",
+    "CLI",
+    "Intlayer",
+    "Git"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "list-projects"
+  ],
+  "history": [
+    {
+      "version": "7.5.12",
+      "date": "2026-01-06",
+      "changes": "Add absolute output option to list projects command"
+    }
+  ],
+  "docKey": "./docs/en/cli/list_projects.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/list_projects.md",
+  "relativeUrl": "/doc/concept/cli/list-projects",
+  "url": "https://intlayer.org/doc/concept/cli/list-projects"
+}

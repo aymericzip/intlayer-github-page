@@ -1,0 +1,36 @@
+{
+  "id": "./docs/en/packages/intlayer/getConfiguration.md",
+  "content": "---\ncreatedAt: 2025-08-23\nupdatedAt: 2025-08-23\ntitle: getConfiguration Function Documentation | intlayer\ndescription: See how to use the getConfiguration function for intlayer package\nkeywords:\n  - getConfiguration\n  - translation\n  - Intlayer\n  - intlayer\n  - Internationalization\n  - Documentation\n  - Next.js\n  - JavaScript\n  - React\nslugs:\n  - doc\n  - packages\n  - intlayer\n  - getConfiguration\nhistory:\n  - version: 5.5.10\n    date: 2025-06-29\n    changes: Init history\n---\n\n# Documentation: `getConfiguration` Function in `intlayer`\n\n## Description\n\nThe `getConfiguration` function retrieves the entire configuration for the `intlayer` application by extracting environment variables. This function provides the flexibility to use the same configuration on both the client and server sides, ensuring consistency across the application.\n\n---\n\n## Parameters\n\nThe function does not take any parameters. Instead, it uses environment variables for configuration.\n\n### Returns\n\n- **Type**: `IntlayerConfig`\n- **Description**: An object containing the complete configuration for `intlayer`. The configuration includes the following sections:\n  - `internationalization`: Settings related to locales and strict mode.\n  - `middleware`: Settings related to URL and cookie management.\n  - `content`: Settings related to content files, directories, and patterns.\n  - `editor`: Editor-specific configurations.\n\nSee [Intlayer configuration documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/configuration.md) for more details.\n\n---\n\n## Example Usage\n\n### Retrieving the Full Configuration\n\n```typescript codeFormat=\"typescript\"\nimport { getConfiguration } from \"intlayer\";\n\nconst config = getConfiguration();\nconsole.log(config);\n// Output:\n// {\n//   internationalization: { ... },\n//   middleware: { ... },\n//   content: { ... },\n//   editor: { ... }\n// }\n```\n\n```javascript codeFormat=\"esm\"\nimport { getConfiguration } from \"intlayer\";\n\nconst config = getConfiguration();\nconsole.log(config);\n// Output:\n// {\n//   internationalization: { ... },\n//   middleware: { ... },\n//   content: { ... },\n//   editor: { ... }\n// }\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getConfiguration } = require(\"intlayer\");\n\nconst config = getConfiguration();\nconsole.log(config);\n// Output:\n// {\n//   internationalization: { ... },\n//   middleware: { ... },\n//   content: { ... },\n//   editor: { ... }\n// }\n```\n\n### Extracting `availableLocales` and `defaultLocale`\n\nThe `internationalization` section of the configuration provides locale-related settings such as `locales` (available locales) and `defaultLocale` (fallback language).\n\n```typescript codeFormat=\"typescript\"\nimport { getConfiguration } from \"intlayer\";\n\nconst { internationalization, middleware } = getConfiguration();\nconst { locales: availableLocales, defaultLocale } = internationalization;\nconst { cookieName } = middleware;\n\nconsole.log(availableLocales); // Output example: [\"en\", \"fr\", \"es\"]\nconsole.log(defaultLocale); // Output example: \"en\"\nconsole.log(cookieName); // Output: \"INTLAYER_LOCALE\"\n```\n\n```javascript codeFormat=\"esm\"\nimport { getConfiguration } from \"intlayer\";\n\nconst { internationalization, middleware } = getConfiguration();\nconst { locales: availableLocales, defaultLocale } = internationalization;\nconst { cookieName } = middleware;\n\nconsole.log(availableLocales); // Output example: [\"en\", \"fr\", \"es\"]\nconsole.log(defaultLocale); // Output example: \"en\"\nconsole.log(cookieName); // Output: \"INTLAYER_LOCALE\"\n```\n\n```javascript codeFormat=\"commonjs\"\nconst { getConfiguration } = require(\"intlayer\");\n\nconst { internationalization, middleware } = getConfiguration();\nconst { locales: availableLocales, defaultLocale } = internationalization;\nconst { cookieName } = middleware;\n\nconsole.log(availableLocales); // Output example: [\"en\", \"fr\", \"es\"]\nconsole.log(defaultLocale); // Output example: \"en\"\nconsole.log(cookieName); // Output: \"INTLAYER_LOCALE\"\n```\n\n## Notes\n\n- Ensure that all required environment variables are correctly set before calling this function. Missing variables will cause errors during initialization.\n- This function can be used on both client and server sides, making it a versatile tool for managing configurations in a unified manner.\n\n## Usage in Applications\n\nThe `getConfiguration` function is a cornerstone utility for initializing and managing the configuration of an `intlayer` application. By providing access to settings like locales, middleware, and content directories, it ensures consistency and scalability across multilingual and content-driven applications.\n",
+  "createdAt": "2025-08-23",
+  "updatedAt": "2025-08-23",
+  "title": "getConfiguration Function Documentation | intlayer",
+  "description": "See how to use the getConfiguration function for intlayer package",
+  "keywords": [
+    "getConfiguration",
+    "translation",
+    "Intlayer",
+    "intlayer",
+    "Internationalization",
+    "Documentation",
+    "Next.js",
+    "JavaScript",
+    "React"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "intlayer",
+    "getConfiguration"
+  ],
+  "history": [
+    {
+      "version": "5.5.10",
+      "date": "2025-06-29",
+      "changes": "Init history"
+    }
+  ],
+  "docKey": "./docs/en/packages/intlayer/getConfiguration.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/getConfiguration.md",
+  "relativeUrl": "/doc/packages/intlayer/getConfiguration",
+  "url": "https://intlayer.org/doc/packages/intlayer/getConfiguration"
+}

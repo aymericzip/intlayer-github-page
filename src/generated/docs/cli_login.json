@@ -1,0 +1,26 @@
+{
+  "id": "./docs/en/cli/login.md",
+  "content": "---\ncreatedAt: 2025-12-16\nupdatedAt: 2025-12-16\ntitle: CLI - Login\ndescription: Learn how to use the Intlayer CLI login command to authenticate with the Intlayer CMS and obtain access credentials.\nkeywords:\n  - CLI\n  - Login\n  - Authentication\n  - CMS\n  - Intlayer\n  - Credentials\nslugs:\n  - doc\n  - concept\n  - cli\n  - login\n---\n\n# Intlayer CLI Login Command\n\n---\n\n## Description\n\nThe `login` command of the Intlayer CLI allows you to authenticate with the Intlayer CMS. This command automatically opens your default browser to complete the authentication process and receive the necessary credentials (Client ID and Client Secret) to use Intlayer services.\n\n## Usage\n\n```bash\nnpx intlayer login [options]\n```\n\nor\n\n```bash\nintlayer login [options]\n```\n\n## Options\n\n### `--cms-url <url>`\n\nSpecify the URL of the Intlayer CMS to connect to for authentication.\n\n- **Type**: `string`\n- **Default**: The value configured in `intlayer.config.*` or `https://intlayer.org`\n- **Example**:\n\n```bash\nnpx intlayer login --cms-url https://intlayer.org\n```\n\n### Configuration Options\n\nYou can also use common configuration options:\n\n- `--env-file <path>`: Path to the environment file\n- `-e, --env <env>`: Execution environment\n- `--base-dir <dir>`: Base directory of the project\n- `--verbose`: Enable detailed output (default: true)\n- `--prefix <prefix>`: Prefix for logs\n\n## How It Works\n\n1. **Local Server Start**: The command starts a local HTTP server on a random port to receive credentials from the CMS\n2. **Browser Opening**: The command automatically opens your default browser to the CMS login URL\n3. **Authentication**: Complete authentication in the browser using your Intlayer account\n4. **Credentials Reception**: The local server receives the Client ID and Client Secret from the CMS\n5. **Instructions**: The command displays instructions for configuring credentials in your project\n\n## Output\n\nAfter a successful login, the command will display:\n\n1. **The received credentials** (Client ID and Client Secret)\n2. **Instructions for the `.env` file**:\n\n```bash\nINTLAYER_CLIENT_ID=your_client_id\nINTLAYER_CLIENT_SECRET=your_client_secret\n```\n\n3. **Instructions for the Intlayer configuration file**:\n\n```typescript\n{\n  editor: {\n    cmsURL: 'https://intlayer.org',\n    clientId: process.env.INTLAYER_CLIENT_ID,\n    clientSecret: process.env.INTLAYER_CLIENT_SECRET,\n  },\n}\n```\n\n## Manual Configuration\n\nIf the browser doesn't open automatically, you can manually visit the URL displayed in the terminal.\n\n## Examples\n\n### Login with Custom CMS URL\n\n```bash\nnpx intlayer login --cms-url https://custom-cms.example.com\n```\n\n### Login with Specific Environment File\n\n```bash\nnpx intlayer login --env-file .env.production\n```\n\n### Login in Verbose Mode\n\n```bash\nnpx intlayer login --verbose\n```\n\n## Troubleshooting\n\n### Browser Doesn't Open\n\nIf the browser doesn't open automatically, copy the URL displayed in the terminal and open it manually in your browser.\n\n### Connection Issues\n\nIf you encounter connection issues, verify:\n\n1. That the CMS URL is correct\n2. That your internet connection is working properly\n3. That there are no firewalls blocking the connection\n\n### Credentials Not Received\n\nIf credentials are not received:\n\n1. Make sure you completed the authentication process in the browser\n2. Verify that the local port is not blocked\n3. Try the command again\n\n## Next Steps\n\nAfter completing the login:\n\n1. Add the credentials to your `.env` file\n2. Configure your `intlayer.config.*` file with the credentials\n3. Use CLI commands to manage your dictionaries:\n   - [`npx intlayer push`](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/push.md) - Push dictionaries to the CMS\n   - [`npx intlayer pull`](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/pull.md) - Pull dictionaries from the CMS\n   - [`npx intlayer fill`](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/fill.md) - Fill missing translations\n\n## See Also\n\n- [CLI Documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/index.md)\n- [Intlayer Configuration](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/configuration.md)\n- [Intlayer CMS](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/intlayer_CMS.md)\n",
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "title": "CLI - Login",
+  "description": "Learn how to use the Intlayer CLI login command to authenticate with the Intlayer CMS and obtain access credentials.",
+  "keywords": [
+    "CLI",
+    "Login",
+    "Authentication",
+    "CMS",
+    "Intlayer",
+    "Credentials"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "login"
+  ],
+  "docKey": "./docs/en/cli/login.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/login.md",
+  "relativeUrl": "/doc/concept/cli/login",
+  "url": "https://intlayer.org/doc/concept/cli/login"
+}

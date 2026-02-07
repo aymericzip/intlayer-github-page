@@ -1,0 +1,25 @@
+{
+  "id": "./docs/en/cli/transform.md",
+  "content": "---\ncreatedAt: 2024-08-11\nupdatedAt: 2025-11-22\ntitle: Transform Components\ndescription: Learn how to transform existing components to use Intlayer.\nkeywords:\n  - Transform\n  - Components\n  - Migration\n  - CLI\n  - Intlayer\nslugs:\n  - doc\n  - concept\n  - cli\n  - transform\n---\n\n# Transform components\n\n```bash\nnpx intlayer transform\n```\n\nThis command analyzes your code files to help migrate existing components to use Intlayer. It supports interactive file selection or specific file targeting.\n\n## Aliases:\n\n- `npx intlayer trans`\n\n## Arguments:\n\n**File selection options:**\n\n- **`-f, --file [files...]`**: List of specific files to transform. If not provided, the CLI will scan for matching files (`**/*.{tsx,jsx,vue,svelte,ts,js}`) and prompt you to select which ones to transform.\n\n  > Example: `npx intlayer transform -f src/components/MyComponent.tsx`\n\n**Output options:**\n\n- **`-o, --output-content-declarations [outputContentDeclarations]`**: Directory to save the generated content declaration files.\n\n  > Example: `npx intlayer transform -o src/content`\n\n- **`--code-only`**: Only transform the component code (do not write content declaration).\n\n  > Example: `npx intlayer transform --code-only`\n\n- **`--declaration-only`**: Only generate content declaration (do not rewrite component).\n\n  > Example: `npx intlayer transform --declaration-only`\n\n**Configuration options:**\n\n- **`--base-dir`**: Specify the base directory for the project.\n- **`--env`**: Specify the environment.\n- **`--env-file`**: Provide a custom environment file.\n- **`--verbose`**: Enable verbose logging.\n\n**Required plugins:**\n\nThe transform command works without additional plugin on TypeScript / JSX files. However, it requires the following plugins to be installed for Vue and Svelte projects:\n\n- **`@intlayer/vue-transformer`**: For Vue files.\n- **`@intlayer/svelte-transformer`**: For Svelte files.\n",
+  "createdAt": "2024-08-11",
+  "updatedAt": "2025-11-22",
+  "title": "Transform Components",
+  "description": "Learn how to transform existing components to use Intlayer.",
+  "keywords": [
+    "Transform",
+    "Components",
+    "Migration",
+    "CLI",
+    "Intlayer"
+  ],
+  "slugs": [
+    "doc",
+    "concept",
+    "cli",
+    "transform"
+  ],
+  "docKey": "./docs/en/cli/transform.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/transform.md",
+  "relativeUrl": "/doc/concept/cli/transform",
+  "url": "https://intlayer.org/doc/concept/cli/transform"
+}

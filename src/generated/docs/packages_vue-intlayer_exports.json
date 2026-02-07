@@ -1,0 +1,31 @@
+{
+  "id": "./docs/en/packages/vue-intlayer/exports.md",
+  "content": "---\ncreatedAt: 2026-01-21\nupdatedAt: 2026-01-21\ntitle: vue-intlayer Package Documentation\ndescription: Vue-specific integration for Intlayer, providing plugins and composables for Vue applications.\nkeywords:\n  - vue-intlayer\n  - vue\n  - internationalization\n  - i18n\nslugs:\n  - doc\n  - packages\n  - vue-intlayer\n  - exports\nhistory:\n  - version: 8.0.0\n    date: 2026-01-21\n    changes: Unified documentation for all exports\n---\n\n# vue-intlayer Package\n\nThe `vue-intlayer` package provides the necessary tools to integrate Intlayer into Vue applications. It includes a Vue plugin and composables for handling multilingual content.\n\n## Installation\n\n```bash\nnpm install vue-intlayer\n```\n\n## Exports\n\n### Plugin\n\nImport:\n\n```tsx\nimport \"vue-intlayer\";\n```\n\n| Function          | Description                                         |\n| ----------------- | --------------------------------------------------- |\n| `installIntlayer` | Vue plugin to install Intlayer in your application. |\n\n### Composables\n\nImport:\n\n```tsx\nimport \"vue-intlayer\";\n```\n\n| Composable             | Description                                                                                                       | Related Doc                                                                                                           |\n| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |\n| `useIntlayer`          | Based on `useDictionary`, but injects an optimized version of the dictionary from the generated declaration.      | -                                                                                                                     |\n| `useDictionary`        | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. | -                                                                                                                     |\n| `useDictionaryAsync`   | Same as `useDictionary`, but handles asynchronous dictionaries.                                                   | -                                                                                                                     |\n| `useDictionaryDynamic` | Same as `useDictionary`, but handles dynamic dictionaries.                                                        | -                                                                                                                     |\n| `useLocale`            | Returns the current locale and a function to set it.                                                              | -                                                                                                                     |\n| `useRewriteURL`        | Client-side composable to manage URL rewrites. Automatically updates the URL if a localized rewrite rule exists.  | [useRewriteURL](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vue-intlayer/useRewriteURL.md) |\n| `useIntl`              | Returns the Intl object for the current locale.                                                                   | -                                                                                                                     |\n| `useLoadDynamic`       | Composable to load dynamic dictionaries.                                                                          | -                                                                                                                     |\n\n### Functions\n\nImport:\n\n```tsx\nimport \"vue-intlayer\";\n```\n\n| Function        | Description                                                                                                       |\n| --------------- | ----------------------------------------------------------------------------------------------------------------- |\n| `getDictionary` | Processes objects that look like dictionaries (key, content). It processes `t()` translations, enumerations, etc. |\n| `getIntlayer`   | Based on `getDictionary`, but injects an optimized version of the dictionary from the generated declaration.      |\n\n### Markdown\n\nImport:\n\n```tsx\nimport \"vue-intlayer/markdown\";\n```\n\n| Function                  | Description                                                  |\n| ------------------------- | ------------------------------------------------------------ |\n| `installIntlayerMarkdown` | Vue plugin to install Intlayer Markdown in your application. |\n",
+  "createdAt": "2026-01-21",
+  "updatedAt": "2026-01-21",
+  "title": "vue-intlayer Package Documentation",
+  "description": "Vue-specific integration for Intlayer, providing plugins and composables for Vue applications.",
+  "keywords": [
+    "vue-intlayer",
+    "vue",
+    "internationalization",
+    "i18n"
+  ],
+  "slugs": [
+    "doc",
+    "packages",
+    "vue-intlayer",
+    "exports"
+  ],
+  "history": [
+    {
+      "version": "8.0.0",
+      "date": "2026-01-21",
+      "changes": "Unified documentation for all exports"
+    }
+  ],
+  "docKey": "./docs/en/packages/vue-intlayer/exports.md",
+  "githubUrl": "https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/vue-intlayer/exports.md",
+  "relativeUrl": "/doc/packages/vue-intlayer/exports",
+  "url": "https://intlayer.org/doc/packages/vue-intlayer/exports"
+}
