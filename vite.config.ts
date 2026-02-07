@@ -21,5 +21,5 @@ export default defineConfig({
     }),
     viteReact(),
   ],
-  base: '/intlayer-github-page',
+  base: '/intlayer-github-page/',
 });
