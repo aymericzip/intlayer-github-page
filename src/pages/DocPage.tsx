@@ -9,6 +9,14 @@ import { urlRenamer } from "../utils/markdown";
 const tocLevels = [2, 3, 4];
 const tocMaxDepth = 4;
 
+const TOC = (props: ComponentProps<typeof TableOfContents>) => (
+  <TableOfContents
+    {...props}
+    levels={props.levels ?? tocLevels}
+    maxDepth={props.maxDepth ?? tocMaxDepth}
+  />
+)
+
 export const DocPage = () => {
   const { doc: currentDoc } = useLoaderData({ from: "/$" });
   const { locale } = useLocale();
@@ -32,13 +40,7 @@ export const DocPage = () => {
         locale={locale}
         isDarkMode={isDarkMode}
         components={{
-          TOC: (props: ComponentProps<typeof TableOfContents>) => (
-            <TableOfContents
-              {...props}
-              levels={props.levels ?? tocLevels}
-              maxDepth={props.maxDepth ?? tocMaxDepth}
-            />
-          ),
+          TOC,
         }}
         wrapper={(props) => (
           <div
