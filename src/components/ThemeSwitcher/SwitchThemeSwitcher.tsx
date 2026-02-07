@@ -5,10 +5,15 @@ import {
 } from '@intlayer/design-system';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import type { FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 
 export const SwitchThemeSwitcher: FC = () => {
+  const [theme, setCurrentTheme] = useState<Modes>(Modes.light);
   const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setCurrentTheme(resolvedTheme === 'dark' ? Modes.dark : Modes.light);
+  }, [resolvedTheme]);
 
   const themeSwitcher = [
     {
@@ -32,7 +37,7 @@ export const SwitchThemeSwitcher: FC = () => {
   return (
     <SwitchSelector
       choices={themeSwitcher}
-      value={resolvedTheme as Modes}
+      value={theme}
       onChange={(val) => setTheme(val)}
       color="text"
       size='sm'
