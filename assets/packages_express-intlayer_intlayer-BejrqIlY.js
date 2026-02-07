@@ -1,0 +1,59 @@
+const e="./docs/en/packages/express-intlayer/intlayer.md",n=`---
+createdAt: 2026-01-21
+updatedAt: 2026-01-21
+title: intlayer Express Middleware Documentation | express-intlayer
+description: See how to use the intlayer middleware for express-intlayer package
+keywords:
+  - intlayer
+  - express
+  - middleware
+  - Intlayer
+  - intlayer
+  - Internationalization
+  - Documentation
+slugs:
+  - doc
+  - packages
+  - express-intlayer
+  - intlayer
+history:
+  - version: 8.0.0
+    date: 2026-01-21
+    changes: Init doc
+---
+
+# intlayer Express Middleware Documentation
+
+The \`intlayer\` middleware for Express detects the user's locale and provides translation functions through the \`res.locals\` object. It also enables the use of the \`t\` and \`getIntlayer\` functions throughout your request handlers.
+
+## Usage
+
+\`\`\`ts
+import express from "express";
+import { intlayer } from "express-intlayer";
+
+const app = express();
+
+app.use(intlayer());
+
+app.get("/", (req, res) => {
+  const content = res.locals.t({
+    en: "Hello",
+    fr: "Bonjour",
+  });
+
+  res.send(content);
+});
+\`\`\`
+
+## Description
+
+The middleware performs the following tasks:
+
+1. **Locale Detection**: It checks cookies, headers (like \`Accept-Language\`), and URL parameters to determine the user's locale.
+2. **Context Setup**: it populates \`res.locals\` with:
+   - \`locale\`: The detected locale.
+   - \`t\`: A translation function bound to the detected locale.
+   - \`getIntlayer\`: A function to retrieve dictionaries bound to the detected locale.
+3. **Async Local Storage**: it sets up a context that allows the use of global \`t\` and \`getIntlayer\` functions imported from \`express-intlayer\` within the request flow.
+`,t="2026-01-21",s="2026-01-21",a="intlayer Express Middleware Documentation | express-intlayer",r="See how to use the intlayer middleware for express-intlayer package",o=["intlayer","express","middleware","Intlayer","intlayer","Internationalization","Documentation"],i=["doc","packages","express-intlayer","intlayer"],l=[{version:"8.0.0",date:"2026-01-21",changes:"Init doc"}],c="./docs/en/packages/express-intlayer/intlayer.md",d="https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/express-intlayer/intlayer.md",p="/doc/packages/express-intlayer/intlayer",y="https://intlayer.org/doc/packages/express-intlayer/intlayer",u={id:e,content:n,createdAt:t,updatedAt:s,title:a,description:r,keywords:o,slugs:i,history:l,docKey:c,githubUrl:d,relativeUrl:p,url:y};export{n as content,t as createdAt,u as default,r as description,c as docKey,d as githubUrl,l as history,e as id,o as keywords,p as relativeUrl,i as slugs,a as title,s as updatedAt,y as url};

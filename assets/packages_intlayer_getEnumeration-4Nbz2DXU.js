@@ -1,0 +1,162 @@
+const n="./docs/en/packages/intlayer/getEnumeration.md",t=`---
+createdAt: 2025-08-23
+updatedAt: 2025-08-23
+title: getEnumeration Function Documentation | intlayer
+description: See how to use the getEnumeration function for intlayer package
+keywords:
+  - getEnumeration
+  - translation
+  - Intlayer
+  - intlayer
+  - Internationalization
+  - Documentation
+  - Next.js
+  - JavaScript
+  - React
+slugs:
+  - doc
+  - packages
+  - intlayer
+  - getEnumeration
+history:
+  - version: 5.5.10
+    date: 2025-06-29
+    changes: Init history
+---
+
+# Documentation: \`getEnumeration\` Function in \`intlayer\`
+
+## Description
+
+The \`getEnumeration\` function (also aliased as \`enu\`) retrieves content corresponding to a specific quantity based on predefined conditions in an enumeration object. The conditions are defined as keys, and their priority is determined by their order in the object.
+
+For more details on how to declare enumerations, see the [Enumeration documentation](https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/dictionary/enumeration.md).
+
+## Parameters
+
+- \`enumerationContent: QuantityContent<Content>\`
+  - **Description**: An object where keys represent conditions (e.g., \`<=\`, \`<\`, \`>=\`, \`=\`) and values represent the corresponding content. The order of keys defines their matching priority.
+  - **Type**: \`QuantityContent<Content>\`
+    - \`Content\` can be any type.
+
+- \`quantity: number\`
+  - **Description**: The numeric value used to match against the conditions in \`enumerationContent\`.
+  - **Type**: \`number\`
+
+## Returns
+
+- **Type**: \`Content\`
+- **Description**: The content corresponding to the first matching condition in the \`enumerationContent\`. If no match is found, it defaults to handling based on the implementation (e.g., error or fallback content).
+
+## Example Usage
+
+### Basic Usage
+
+\`\`\`typescript codeFormat="typescript"
+import { getEnumeration } from "intlayer";
+
+const content = getEnumeration(
+  {
+    "<=-2.3": "You have less than -2.3",
+    "<1": "You have less than one",
+    "2": "You have two",
+    ">=3": "You have three or more",
+  },
+  2
+);
+
+console.log(content); // Output: "You have two"
+\`\`\`
+
+\`\`\`javascript codeFormat="esm"
+import { getEnumeration } from "intlayer";
+
+const content = getEnumeration(
+  {
+    "<1": "You have less than one",
+    "2": "You have two",
+    ">=3": "You have three or more",
+  },
+  2
+);
+
+console.log(content); // Output: "You have two"
+\`\`\`
+
+\`\`\`javascript codeFormat="commonjs"
+const { getEnumeration } = require("intlayer");
+
+const content = getEnumeration(
+  {
+    "<1": "You have less than one",
+    "2": "You have two",
+    ">=3": "You have three or more",
+  },
+  2
+);
+
+console.log(content); // Output: "You have two"
+\`\`\`
+
+### Priority of Conditions
+
+\`\`\`typescript codeFormat="typescript"
+import { getEnumeration } from "intlayer";
+
+const content = getEnumeration(
+  {
+    "<4": "You have less than four",
+    "2": "You have two",
+  },
+  2
+);
+
+console.log(content); // Output: "You have less than four"
+\`\`\`
+
+\`\`\`javascript codeFormat="esm"
+import { getEnumeration } from "intlayer";
+
+const content = getEnumeration(
+  {
+    "<4": "You have less than four",
+    "2": "You have two",
+  },
+  2
+);
+
+console.log(content); // Output: "You have less than four"
+\`\`\`
+
+\`\`\`javascript codeFormat="commonjs"
+const { getEnumeration } = require("intlayer");
+
+const content = getEnumeration(
+  {
+    "<4": "You have less than four",
+    "2": "You have two",
+  },
+  2
+);
+
+console.log(content); // Output: "You have less than four"
+\`\`\`
+
+## Edge Cases
+
+- **No Matching Condition:**
+  - If no condition matches the provided quantity, the function will either return \`undefined\` or handle the default/fallback scenario explicitly.
+
+- **Ambiguous Conditions:**
+  - If conditions overlap, the first matching condition (based on object order) takes precedence.
+
+- **Invalid Keys:**
+  - The function assumes that all keys in \`enumerationContent\` are valid and parsable as conditions. Invalid or improperly formatted keys may lead to unexpected behavior.
+
+- **TypeScript Enforcement:**
+  - The function ensures that the \`Content\` type is consistent across all keys, allowing for type safety in the retrieved content.
+
+## Notes
+
+- The \`findMatchingCondition\` utility is used to determine the appropriate condition based on the given quantity.
+`,e="2025-08-23",o="2025-08-23",a="getEnumeration Function Documentation | intlayer",i="See how to use the getEnumeration function for intlayer package",r=["getEnumeration","translation","Intlayer","intlayer","Internationalization","Documentation","Next.js","JavaScript","React"],s=["doc","packages","intlayer","getEnumeration"],c=[{version:"5.5.10",date:"2025-06-29",changes:"Init history"}],u="./docs/en/packages/intlayer/getEnumeration.md",l="https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/packages/intlayer/getEnumeration.md",m="/doc/packages/intlayer/getEnumeration",d="https://intlayer.org/doc/packages/intlayer/getEnumeration",h={id:n,content:t,createdAt:e,updatedAt:o,title:a,description:i,keywords:r,slugs:s,history:c,docKey:u,githubUrl:l,relativeUrl:m,url:d};export{t as content,e as createdAt,h as default,i as description,u as docKey,l as githubUrl,c as history,n as id,r as keywords,m as relativeUrl,s as slugs,a as title,o as updatedAt,d as url};
