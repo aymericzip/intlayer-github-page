@@ -139,9 +139,9 @@ export default defineConfig(({ mode }) => {
       intlayer(),
       tailwindcss(),
       tanstackStart({
-        router: {
-          routeFileIgnorePattern:
-            '.content.(ts|tsx|js|mjs|cjs|jsx|json|jsonc|json5)$',
+        prerender: {
+          enabled: true, // This tells Start to generate static HTML
+          crawlLinks: true, // Automatically finds routes to prerender
         },
       }),
       viteReact(),
