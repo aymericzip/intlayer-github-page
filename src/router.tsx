@@ -13,7 +13,6 @@ const docsMetadata = Object.values(docsIndex);
 
 export const getRouter = () => {
   const router = createRouter({
-    basepath: '/intlayer-github-page',
     routeTree,
     scrollRestoration: true,
     context: {
