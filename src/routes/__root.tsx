@@ -46,6 +46,10 @@ export const Route = createRootRouteWithContext<RouterContext>()({
       {
         title: 'Intlayer Documentation',
       },
+      {
+        name: 'google-site-verification',
+        content: 'co6NNrCBetuwrN_SDYuqoBDgFqonCZ5TUIcjqusoC4E',
+      },
     ],
   }),
 
