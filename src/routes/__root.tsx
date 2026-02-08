@@ -67,8 +67,10 @@ function RootDocument({ children }: { children: ReactNode }) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
                   return s.replace(/~and~/g, '&')
                 }).join('?');
+                var p = l.pathname;
+                if (p.endsWith('/')) p = p.slice(0, -1);
                 window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
+                    p + '/' + decoded + l.hash
                 );
               }
             }(window.location))`,
