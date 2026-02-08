@@ -1,7 +1,6 @@
 import {
   createRootRouteWithContext,
   HeadContent,
-  Scripts,
 } from '@tanstack/react-router';
 import { defaultLocale, getHTMLTextDir  } from 'intlayer';
 import { type ReactNode } from 'react';
@@ -67,7 +66,6 @@ function RootDocument({ children }: { children: ReactNode }) {
             <MainLayout>{children}</MainLayout>
           </ThemeProvider>
         </IntlayerProvider>
-        <Scripts />
       </body>
     </html>
   );
