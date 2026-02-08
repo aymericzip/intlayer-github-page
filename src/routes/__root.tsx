@@ -62,7 +62,7 @@ function RootDocument({ children }: { children: ReactNode }) {
     <html dir={getHTMLTextDir(defaultLocale)} lang={defaultLocale}>
       <head>
         <HeadContent />
-
+        <meta name="google-site-verification" content="WgjkU6Is3qDQiXoCg936ZA5AhL_zxtt6tGKfVzKkkuI" />
       </head>
       <body>
         <IntlayerProvider locale={defaultLocale}>
