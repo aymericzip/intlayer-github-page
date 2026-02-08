@@ -59,6 +59,21 @@ function RootDocument({ children }: { children: ReactNode }) {
     <html dir={getHTMLTextDir(defaultLocale)} lang={defaultLocale}>
       <head>
         <HeadContent />
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{
+            __html: `(function(l) {
+              if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                  return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+              }
+            }(window.location))`,
+          }}
+        />
       </head>
       <body>
         <IntlayerProvider locale={defaultLocale}>

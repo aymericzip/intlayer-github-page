@@ -8,10 +8,9 @@
     "dev": "vite dev --port 3000",
     "prebuild": "bun scripts/generate-docs.ts && bun scripts/generate-sitemap.ts",
     "build": "vite build",
-    "postbuild": "cp .output/public/index.html .output/public/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d .output/public"
+    "deploy": "gh-pages -d dist/client"
   },
   "dependencies": {
     "@intlayer/design-system": "latest",

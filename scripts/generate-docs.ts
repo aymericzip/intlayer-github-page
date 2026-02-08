@@ -13,11 +13,11 @@ const run = async () => {
 
     const docsIndex: Record<string, {
       id: string;
-      content: string;
       title: string;
       description: string;
       keywords: string[];
       relativeUrl: string;
+      file: string
     }> = {};
 
     await Promise.all(
